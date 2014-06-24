@@ -66,6 +66,15 @@ label {
     padding:0;
 }
 
+.linea{
+    border-bottom-width: 1px;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+}
+
+.anchototal{
+    width: 100%;
+}
 
 
 /* Contenido Páginas
@@ -1186,7 +1195,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     border-color: #000000;
     background-color: #FFFFFF;
     padding-bottom: 18px;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
@@ -1194,4 +1203,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
+
 
