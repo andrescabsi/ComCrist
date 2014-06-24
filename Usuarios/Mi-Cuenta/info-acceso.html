@@ -1,0 +1,26 @@
+<section class="section">
+<h1 class="h1">{module_pagename}</h1>
+<h4 class="h4">Edita tus datos de acceso</h4>
+<section>
+<section class="c1_completa_tu_perfilB">
+    <p class="p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliq, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+</section>
+
+<section class="c2_completa_tu_perfilB">
+    
+<form class="formulario" name="catwebformform46380" method="post" onsubmit="return checkWholeForm46380(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=106354&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}&JSON=1">
+
+      <input placeholder="Nombre" value="{module_firstname}" type="text" name="FirstName" id="FirstName" class="cat_textbox" maxlength="255"/>
+      <input placeholder="Apellido" value="{module_lastname}" type="text" name="LastName" id="LastName" class="cat_textbox" maxlength="255"/>
+      <input placeholder="Correo Electrónico" value="{module_emailaddress}" type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255"/>
+
+      <input style="display:none;" placeholder="Nombre Usuario" value="{module_emailaddress}" name="Username" id="Username" class="cat_textbox" maxlength="255"/>
+      <input placeholder="Contraseña" value="{module_password}" type="password" name="Password" id="Password" class="cat_textbox" maxlength="255" autocomplete="off" />
+      <input placeholder="Confirma tu contraseña" value="{module_password}" type="password" name="PasswordConfirm" id="PasswordConfirm" class="cat_textbox" maxlength="255" autocomplete="off" />
+      {module_ccsecurity}
+
+      <button class="boton_amarillo" type="submit" id="catwebformbutton">Actualizar Información</button>        
+
+</form>
+    
+</section>

@@ -1,0 +1,133 @@
+<section class="section">
+    <h1 class="h1">{module_pagename}</h1>
+    <h4 class="h4">Completa tu informaci&oacute;n y empieza a publicar en segundos</h4>
+<section>
+    
+<section class="c1_completa_tu_perfil">
+    <h4><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong></h4>
+    	<p class="p">Elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    <h4><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong></h4>
+    	<p class="p">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+    <h4><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong></h4>
+    	<p class="p">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+    <h4><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong></h4>
+    	<p class="p">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+    
+    <!-- Agregar boton publicar si ya esta registrado-->
+    <div class="contenedor_boton_publicar"></div>
+</section>
+    
+<!--  Formulario Webapp Anunciantes
+:::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<section class="c2_completa_tu_perfil">
+<h4 style="display: none;" id="creacion_perfil_anunciante_nuevo_titulo" class="h4">Crear Perfil Anunciante</h4>
+<br />
+<!-- Formulario Creacion Perfil-->
+<form style="display: none;" id="creacion_perfil_anunciante_nuevo" name="catcustomcontentform79240" onsubmit="return checkWholeForm79240(this)" enctype="multipart/form-data" method="post" action="/CustomContentProcess.aspx?CCID=16609&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;PageID=/Usuarios/Mi-Cuenta/perfil-anunciante">
+    <!-- ID Oculto -->
+    <input style="display: none;" placeholder="ID Cliente" type="text" maxlength="255" name="CAT_Custom_21" id="CAT_Custom_21" class="cat_textbox" />
+    <!-- Campos Ocultos -->
+    <div style="display: none;">
+    <label for="ItemName">Nombre:</label>
+    <input placeholder="Ingresa por favor tu Nombre" value="{module_firstname}" class="cat_textbox_small" type="text" name="ItemName" id="ItemName" maxlength="255" />
+    <label for="CAT_Custom_20">Apellido:</label>
+    <input placeholder="Ingresa por favor tu Apellido" value="{module_lastname}" type="text" maxlength="4000" name="CAT_Custom_20" id="CAT_Custom_20" class="cat_textbox" />
+    <label for="CAT_Custom_8">Correo Electronico:</label>
+    <input placeholder="Ingresa por favor un Correo Electronico v&aacute;lido" value="{module_emailaddress}" type="text" maxlength="4000" name="CAT_Custom_8" id="CAT_Custom_8" class="cat_textbox" />
+    </div>
+    <!-- Campos Ocultos -->
+    <label for="CAT_Custom_2">C&eacute;dula:</label>
+    <input placeholder="Ingresa por favor tu n&uacute;mero de C&eacute;dula" type="text" maxlength="4000" name="CAT_Custom_2" id="CAT_Custom_2" class="cat_textbox" />
+    <label for="CAT_Custom_3">Iglesia:</label>
+    <input placeholder="Ingresa por favor el nombre de tu Iglesia" type="text" maxlength="4000" name="CAT_Custom_3" id="CAT_Custom_3" class="cat_textbox" />
+    <label for="CAT_Custom_18">N&uacute;mero del versiculo:</label>
+    <input placeholder="Ej: Juan 5" type="text" maxlength="4000" name="CAT_Custom_18" id="CAT_Custom_18" class="cat_textbox" />
+    <label for="CAT_Custom_17">Palabra que inspiro el ministerio/empresa:</label>
+    <textarea placeholder="Ej: Alg&uacute;n tiempo despu&eacute;s, se celebraba una fiesta de los jud&iacute;os, y subi&oacute; Jes&uacute;s a Jerusal&eacute;n. 2 Hab&iacute;a all&iacute;, junto a la puerta de las Ovejas, un estanque rodeado de cinco p&oacute;rticos, cuyo nombre en arameo es Betzat&aacute;." name="CAT_Custom_17" id="CAT_Custom_17" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea>
+    <label for="CAT_Custom_9">Telefono d&iacute;a:</label>
+    <input placeholder="Aseg&uacute;rate de incluir el indicativo de ciudad" type="text" maxlength="4000" name="CAT_Custom_9" id="CAT_Custom_9" class="cat_textbox" />
+    <label for="CAT_Custom_10">Celular:</label>
+    <input placeholder="Ingresa por favor tu n&uacute;mero celular" type="text" maxlength="4000" name="CAT_Custom_10" id="CAT_Custom_10" class="cat_textbox" />
+    <label for="CAT_Custom_22">Ciudad:</label>
+    <input placeholder="Ingresa por favor la Ciudad donde vives" type="text" maxlength="4000" name="CAT_Custom_22" id="CAT_Custom_22" class="cat_textbox" />
+    <label for="CAT_Custom_12">Departamento/Estado:</label>
+    <input placeholder="Ingresa por favor el Departamento/Estado" type="text" maxlength="4000" name="CAT_Custom_12" id="CAT_Custom_12" class="cat_textbox" />
+    <label for="CAT_Custom_24">Pa&iacute;s:</label>
+    <select name="CAT_Custom_24" id="CAT_Custom_24" class="cat_dropdown">
+    {module_contentholder,1609112}<!-- Paises -->
+    </select>
+    <!--Empresa-->
+    <br />
+    <label for="CAT_Custom_30">
+    <input type="checkbox" name="CAT_Custom_30" id="CAT_Custom_30" value="1" />
+    <span><strong>&iquest;Tienes una Empresa?</strong></span>
+    </label>
+    <br />
+    <div id="eresUnaEmpresa" style="display: none;">
+    <label for="CAT_Custom_4">Nombre Empresa:</label>
+    <input placeholder="Ej: Mi Empresa" type="text" maxlength="4000" name="CAT_Custom_4" id="CAT_Custom_4" class="cat_textbox" />
+    <label for="CAT_Custom_32">Razon Social</label>
+    <input placeholder="Ej: Mi Empresa S.A.S." type="text" maxlength="4000" name="CAT_Custom_32" id="CAT_Custom_32" class="cat_textbox" />
+    <label for="CAT_Custom_33">NIT</label>
+    <input placeholder="Ej: 900123456-6" type="text" maxlength="255" name="CAT_Custom_33" id="CAT_Custom_33" class="cat_textbox" />
+    <label for="CAT_Custom_25">N&uacute;mero de Empleados:</label>
+    <select name="CAT_Custom_25" id="CAT_Custom_25" class="cat_dropdown">
+    <option value=" ">-- Selecciona una opci&oacute;n --</option>
+    <option value="1 a 10">1 a 10</option>
+    <option value="10-49">10-49</option>
+    <option value="50-99">50-99</option>
+    <option value="M&aacute;s de 100">M&aacute;s de 100</option>
+    </select>
+    <label for="CAT_Custom_5">A&ntilde;os de Experiencia:</label>
+    <input placeholder="Ej: 4" type="text" maxlength="255" name="CAT_Custom_5" id="CAT_Custom_5" class="cat_textbox" />
+    <label for="ItemDescription">Misi&oacute;n, Visi&oacute;n, Objetivos, Qui&eacute;nes somos:</label>
+    <textarea placeholder="Cu&eacute;ntanos un poco m&aacute;s acerca de tu empresa" name="ItemDescription" id="ItemDescription" cols="10" rows="4" class="cat_listbox"></textarea>
+    <label for="CAT_Custom_26">Logo:</label>
+    <input type="file" name="CAT_Custom_26" id="CAT_Custom_26" class="cat_textbox" />
+    <label for="CAT_Custom_16">Video corporativo:</label>
+    <input placeholder="Ej: http://www.youtube.com/CodigoDelVideo" type="text" maxlength="4000" name="CAT_Custom_16" id="CAT_Custom_16" class="cat_textbox" />
+    <label for="CAT_Custom_7">Pagina Web (Si aplica):</label>
+    <input placeholder="Ej: www.miempresa.com" type="text" maxlength="4000" name="CAT_Custom_7" id="CAT_Custom_7" class="cat_textbox" />
+    </div>
+    <label for="CAT_Custom_27">
+    <input type="checkbox" name="CAT_Custom_27" id="CAT_Custom_27" value="1" />
+    <span>Estoy oficialmente agremiado en CIEC</span>
+    <a>Conoc&eacute; como ser parte de la Camara de Empresarios Cristianos de Colombia</a>
+    </label>
+    <label for="CAT_Custom_31">
+    <input type="checkbox" name="CAT_Custom_31" id="CAT_Custom_31" value="1" />
+    <span>Me uno al programa de empresario Biblico</span>
+    <a>Conoce m&aacute;s de este sello de confianza para el comprador</a>
+    </label>
+    <label for="CAT_Custom_31">
+    <input type="checkbox" name="CampaignList_51951" /><!--Suscripci&oacute;n lista Empresario B-->
+    <span>Quiero recibir novedades por email</span>
+    </label>
+    <label for="CAT_Custom_28">
+    <input type="checkbox" name="CAT_Custom_28" id="CAT_Custom_28" value="1" />
+    <span id="politicasCondiciones_txt">Al registrarme, declaro que soy mayor de edad y acepto las Pol&iacute;ticas de Privacidad y los T&eacute;rminos y Condiciones de El Arca de Comercio S.A.S.</span>
+    </label>
+    <span id="boton_deshabilitado_container">
+    <div class="boton_inhabilitado">Crear Perfil Anunciante</div>
+    </span>
+    <span style="display: none;" id="boton_habilitado_container">
+    <button class="boton_amarillo" type="submit" id="catcustomcontentbutton">Crear Perfil Anunciante</button>
+    </span>
+</form>
+<!-- Validar si existe el perfil y editar perfil-->
+<div style="display: none;" id="cont_ind_anun_pro">{module_webappscustomer,16609,a,,,,True,,True,,}</div>
+
+</section>
+<!-- Ocultos  
+:::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<section style="display: none;">
+<!-- CRM obtener EID y Almacenar Campo OID Webapp Anunciante-->
+<form style="display: none;" id="form_crm_usuario_pub" name="catwebformform8211" method="post" onsubmit="return checkWholeForm8211(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=106354&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}&amp;JSON=1">
+    <input value="{module_emailaddress}" type="hidden" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255" />
+    <!-- OID Webapp Anunciante -->
+    <input type="text" maxlength="4000" name="CAT_Custom_507078_327" id="CAT_Custom_507078_327" class="cat_textbox" />
+    <!-- EID Usuario -->
+    <input type="text" maxlength="4000" name="CAT_Custom_498876_327" id="CAT_Custom_498876_327" class="cat_textbox" />
+</form>
+</section>
+</section></section>

@@ -1,0 +1,64 @@
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+    .ocultos {
+    display: none;
+    }
+    .visibles {
+    display:inline;
+    }
+</style>
+<script>
+  $(function() {
+    $( "#boton-cuadro" ).click(function(){
+		$( ".listado" ).hide();
+		$( ".cuadro" ).show();
+        $("#container-publicaciones").attr('style','height:auto;');
+        $("#container-publicaciones2").attr('style','height:0;overflow:hidden;');
+      return false;
+    });
+  });
+      
+  $(function() {
+    $( "#boton-listado" ).click(function(){
+		$( ".listado" ).show();
+		$( ".cuadro" ).hide();
+        $("#container-publicaciones2").attr('style','height:auto;');
+        $("#container-publicaciones").attr('style','height:0;overflow:hidden;');
+      return false;
+    });
+  });
+    
+    
+
+    
+
+
+    
+    
+    
+    
+    
+    /*
+  $(function() {
+    $( "#boton-cuadro" ).click(function(){
+      $( ".listado" ).switchClass( "visibles", "ocultos");
+      $( ".cuadro" ).switchClass( "ocultos", "visibles");
+      return false;
+    });
+  });
+      
+  $(function() {
+    $( "#boton-listado" ).click(function(){
+      $( ".listado" ).switchClass( "ocultos", "visibles");
+      $( ".cuadro" ).switchClass( "visibles", "ocultos");
+      return false;
+    });
+  });
+    
+    
+    */
+    
+    
+    
+    
+  </script>

@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+#menuFooterComercio {
+    text-decoration: none;
+    margin-left: 0;
+}
+
+#menuFooterComerciolink {
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #113689;
+}
+
+#menuFooterComerciolink:hover{
+    color: #1849B7;
+    text-decoration:underline;
+}
+
+#menuFooterComercioul {
+    list-style-position:inside;
+    margin-left: 0;
+    list-style-type: circle;
+    text-decoration:none;
+}
+
+

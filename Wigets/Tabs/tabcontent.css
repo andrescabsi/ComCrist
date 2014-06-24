@@ -1,0 +1,101 @@
+/* Tab Content - menucool.com */
+
+ul.tabs
+{
+    padding: 7px 0;
+    font-size: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: left; /*set to left, center, or right to align the tabs as desired*/
+}
+        
+ul.tabs li
+{
+    display: inline;
+    margin: 0;
+    margin-right:3px; /*distance between tabs*/
+}
+        
+ul.tabs li a
+{
+    border-bottom-color: white;
+    border-left: 1px solid #e3e3df;
+    border-top: none;
+    border-right: none;
+    font-size: 13px;
+    font-weight: 400;
+    background: #ffffff;
+    margin: 0 -2px 0px 0;
+    padding: 22px 30px 16px;
+    text-decoration: none;
+    border-radius: 0;
+    color: #ccc;
+    font-size: 16px;
+}
+        
+/*ul.tabs li a:visited
+{
+    color: #ccc;
+}*/
+        
+ul.tabs li a:hover
+{
+    color: #333;
+}
+        
+ul.tabs li.selected a, ul.tabs li.selected a:hover
+{
+    border-bottom-color: white;
+    border-left: 1px solid #e3e3df;
+    border-top: none;
+    border-right: none;
+    font-size: 13px;
+    font-weight: 400;
+    background: #ffffff;
+    margin: 0 -2px 0px 0;
+    padding: 22px 30px 18px;
+    text-decoration: none;
+    border-radius: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+}
+        
+        
+ul.tabs li.selected a:hover
+{
+    text-decoration: none;
+}
+
+ul.tabs li.selected a:active
+{
+    cursor:text;
+    padding: 22px 30px 20px;
+    color: #333;
+}
+     
+
+div.tabcontents
+{
+    background-color:#FFF;
+    border-radius: 0 3px 3px 3px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    margin-top: 7px;
+}
+
+#view1, #view2, #view3, #view4, #view5 {
+	min-height: 130px;
+    padding: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #ffffff;
+    border-left: 1px solid #e3e3df;
+    border-right: 1px solid #e3e3df;
+    border-bottom: 1px solid #e3e3df;
+    -webkit-box-shadow: 0 1px 0 0 #e3e3df;
+    -moz-box-shadow: 0 1px 0 0 #e3e3df;
+    box-shadow: 0 1px 0 0 #e3e3df;
+}

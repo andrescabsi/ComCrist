@@ -1,0 +1,149 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" />
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    </head>
+    <body>
+        {module_webapps,17467,i,4329446,,,,10000,true,1 template="/ModuleTemplates/Webapps/MiEmpresa/Empresa-YouTube.tpl"}
+        <a id="boton-1" href="#">Boton</a>
+        <div class="listadocategorias">Holaaaaaa</div>
+        <form name="catcustomcontentform1501" method="post" onsubmit="return checkWholeForm1501(this)" action="/Default.aspx?CCID=16641&amp;FID=173166&amp;ExcludeBoolFalse=True&amp;PageID={module_oid}">
+            <label for="CAT_Category">Categor&iacute;a</label>
+            <select name="CAT_Category" id="CAT_Category" class="cat_listbox" rows="4" multiple="multiple">{module_categorylist}</select>
+            <input class="cat_button" type="submit" value="Search" />
+        </form>
+        <script>
+
+            $(document).ready(function() {
+                
+                
+                //Ocultar todas las categorias
+                $("#CAT_Category").hide();
+                
+                //Agregar clase a todos los option
+                $("#CAT_Category option").addClass("categorias-java");
+                
+                //Quitar Hyphens listado categorias
+                $('#CAT_Category option').each(function() {
+                    $(this).text($(this).text().replace(/-/g, ""));
+                });
+                
+                //Quitar Hyphens nombre categoria
+                $('#CAT_Category option').each(function() {
+                    $(this).text($(this).text().replace(/-/g, ""));
+                });
+                
+                //Seleccionar categoria basado en el nombre de la subcategoria
+                
+                var texto1 = 'Aplicaciones';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto1;
+                }).attr('selected', true);
+                
+                var texto2 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto2;
+                }).attr('selected', true);
+
+                var texto3 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto3;
+                }).attr('selected', true);
+                
+                var texto4 = 'Aplicaciones';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto4;
+                }).attr('selected', true);
+                
+                var texto5 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto5;
+                }).attr('selected', true);
+
+                var texto6 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto6;
+                }).attr('selected', true);
+                
+                var texto7 = 'Aplicaciones';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto7;
+                }).attr('selected', true);
+                
+                var texto8 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto8;
+                }).attr('selected', true);
+
+                var texto9 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto9;
+                }).attr('selected', true);
+                
+                var texto10 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto10;
+                }).attr('selected', true);
+                
+                var texto11 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto11;
+                }).attr('selected', true);   
+                
+                var texto12 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto12;
+                }).attr('selected', true);
+                
+                var texto13 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto13;
+                }).attr('selected', true);
+                
+                var texto14 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto14;
+                }).attr('selected', true);
+                
+                var texto15 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto15;
+                }).attr('selected', true);
+                
+                var texto16 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto16;
+                }).attr('selected', true);
+                
+                var texto17 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto17;
+                }).attr('selected', true);
+                
+                var texto18 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto18;
+                }).attr('selected', true);
+                
+                var texto19 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto19;
+                }).attr('selected', true);
+                
+                var texto20 = 'Devocionales';
+                $("#CAT_Category option").filter(function() {
+                    return this.text == texto20;
+                }).attr('selected', true);
+                
+                
+                
+                //$("#boton-1").click(function(){});
+                
+                
+                
+            });
+        </script>
+    </body>
+</html>

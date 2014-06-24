@@ -1,0 +1,78 @@
+#u14963 body {
+	font-family: Arial,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px; 
+}
+
+#u14963 p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	color: #606060;
+}
+
+#u14963 h1 {
+	font-size: 35px;
+}
+
+#u14963 h2 {
+	font-size: 30px;
+	color: #333;
+}
+
+#u14963 h3 {
+	font-size: 24px;
+	color: #333;
+}
+
+#u14963 h4 {
+	font-size: 18px;
+	color: #333;
+}
+
+#u14963 h5 {
+	font-size: 14px;
+	color: #333;
+}
+
+#u14963 h6 {
+	font-size: 12px;
+	color: #333;
+}
+
+#u14963 h1, .h1, h2, .h2, h3, .h3 {
+margin-bottom: 10px;
+}
+
+
+
+#u14963 ul, ol {
+margin-top: 0;
+margin-bottom: 10px;
+}
+
+#u14963 ul:last-child {
+margin-bottom: 30px;
+}
+
+#u14963 ul, menu, dir {
+display: block;
+list-style:disc;
+list-style-type: disc;
+margin-left:30px;
+}
+
+#u14963 li {
+	margin-bottom: 10px;
+	font-size: 14px; 
+	color: #606060;
+    list-style-position:inside;
+}
+
+#u14963 li:before
+{ 
+content:"•  ";
+    color:#333;
+    margin-right:3px;
+}

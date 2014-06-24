@@ -1,0 +1,64 @@
+http://jsfiddle.net/7y9MA/3/
+
+<div class="tab-content">
+    <div id="filters">
+        <p>
+            <a class="sortByPriceMen" href="#" >Sort by Price Menor</a>
+            <br>
+            <a class="sortByPriceMay" href="#">Sort by Price Mayor</a>
+        </p>
+    </div>
+
+
+    <div id="div_hotel_results" class="tab-pane active">
+        <form id="hotel-form">
+        ...
+        </form>
+        <div class="results">
+            <div class="results-row">
+                <h5>Riders Lodge</h5>
+                <span class="label label-info price">$103.64</span>
+                <span class="rating">3.0</span>
+            </div>
+    
+            <div class="results-row">
+                <h5>Olina Lodge</h5>
+                <span class="label label-info price">$99.64</span>
+                <span class="rating">2.5</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+var ascending = false;
+//Boton Menor precio (sortByPriceMen)
+$('.tab-content').on('click','.sortByPriceMen',function(){
+
+    var sorted = $('.results-row').sort(function(a,b){
+        return (ascending ==
+               (convertToNumber($(a).find('.price').html()) < 
+                convertToNumber($(b).find('.price').html()))) ? 1 : -1;
+    });
+    ascending = ascending ? false : true;
+
+    $('.results').html(sorted);
+});
+
+//Boton Menor precio (sortByPriceMay)
+$('.tab-content').on('click','.sortByPriceMay',function(){
+
+    var sorted = $('.results-row').sort(function(a,b){
+        return (ascending ==
+               (convertToNumber($(a).find('.price').html()) < 
+                convertToNumber($(b).find('.price').html()))) ? -1 : 1;
+    });
+    ascending = ascending ? false : true;
+
+    $('.results').html(sorted);
+});
+
+var convertToNumber = function(value){
+     return parseFloat(value.replace('$',''));
+}
+    
+</script>

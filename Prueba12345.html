@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" content="" />
+        <style>
+            .ocultos {
+                display: none;
+            }
+            .visibles {
+                display:inline;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="prueba12">Formulario</div>
+        
+        
+        
+            <select name="CAT_Category" id="CAT_Category" class="cat_listbox" rows="4"
+        multiple="multiple">
+            <option value="-1">-- Seleccione una Categoria --</option>
+			<option class="Aplicaciones" value="112436" disabled="disabled">Aplicaciones</option>
+            	<option class="Aplicaciones-Crecimiento" value="113213"disabled="disabled">---Crecimiento</option>
+                    <option class="Aplicaciones-Crecimiento-Android" value="113239">------Android</option>
+                    <option class="Aplicaciones-Crecimiento-BlackBerry" value="113241">------BlackBerry</option>
+                    <option class="Aplicaciones-Crecimiento-IOS-Mac" value="113240">------IOS-Mac</option>
+                    <option class="Aplicaciones-Crecimiento-Nokia" value="113242">------Nokia</option>
+                    <option class="Aplicaciones-Crecimiento-Otros" value="113243">------Otros</option>
+            
+            	<option class="Aplicaciones-Devocionales" value="113043"disabled="disabled">---Devocionales</option>
+                    <option class="Aplicaciones-Devocionales-Android" value="113219">------Android</option>
+                    <option class="Aplicaciones-Devocionales-BlackBerry" value="113221">------BlackBerry</option>
+                    <option class="Aplicaciones-Devocionales-IOS-Mac" value="113220">------IOS-Mac</option>
+                    <option class="Aplicaciones-Devocionales-Nokia" value="113222">------Nokia</option>
+                    <option class="Aplicaciones-Devocionales-Otros" value="113223">------Otros</option>
+            
+            	<option class="Aplicaciones-EstudiosBiblicos" value="113211"disabled="disabled">---Estudios Biblicos</option>
+                    <option class="Aplicaciones-EstudiosBiblicos-Android" value="113229">------Android</option>
+                    <option class="Aplicaciones-EstudiosBiblicos-BlackBerry" value="113231">------BlackBerry</option>
+                    <option class="Aplicaciones-EstudiosBiblicos-IOS-Mac" value="113230">------IOS - Mac</option>
+                    <option class="Aplicaciones-EstudiosBiblicos-Nokia" value="113232">------Nokia</option>
+                    <option class="Aplicaciones-EstudiosBiblicos-Otros" value="113233">------Otros</option>
+
+
+            <option class="ciudades" value="113324">CIUDADES</option>
+            <option class="ciudades" value="113326">---Barranquilla</option>
+            <option class="ciudades" value="113325">---Bogota</option>
+            <option class="ciudades" value="113327">---Cali</option>
+            <option class="ciudades" value="113328">---Cartagena</option>
+                
+
+        </select>
+       
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            
+            $("#prueba12").hide().before("<a href='#' id='boton'>Boton</a>");
+            $("#boton").click(function(){
+            	var $link = $(this);
+                $link.next().show("slow").prev().remove();
+                return false;
+            });
+			$(".ciudades").remove();
+            
+//COMPORTAMIENTO SELECCION CATEGORIA
+            
+      //APLICACIONES
+            
+            //Crecimiento
+        
+            
+                    $(".Aplicaciones-Crecimiento-Android").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Crecimiento').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Crecimiento-BlackBerry").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Crecimiento').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Crecimiento-IOS-Mac").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Crecimiento').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Crecimiento-Nokia").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Crecimiento').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Crecimiento-Otros").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Crecimiento').attr("selected","selected"); 
+                    });
+        
+            //Crecimiento final
+            
+            //Devocionales
+
+                    $(".Aplicaciones-Devocionales-Android").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Devocionales').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Devocionales-BlackBerry").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Devocionales').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Devocionales-IOS-Mac").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Devocionales').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Devocionales-Nokia").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Devocionales').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-Devocionales-Otros").click(function(){
+                        $('.Aplicaciones').attr("selected","selected"); 
+                        $('.Aplicaciones-Devocionales').attr("selected","selected"); 
+                    });
+            
+            
+            //Devocionales final
+            
+
+            
+            
+            //Estudios Bíblicos
+            
+
+            
+                    $(".Aplicaciones-EstudiosBiblicos-Android").click(function(){
+                        $('.Aplicaciones').attr("selected","selected");  
+                        $('.Aplicaciones-EstudiosBiblicos').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-EstudiosBiblicos-BlackBerry").click(function(){
+                        $('.Aplicaciones').attr("selected","selected");  
+                        $('.Aplicaciones-EstudiosBiblicos').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-EstudiosBiblicos-IOS-Mac").click(function(){
+                        $('.Aplicaciones').attr("selected","selected");  
+                        $('.Aplicaciones-EstudiosBiblicos').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-EstudiosBiblicos-Nokia").click(function(){
+                        $('.Aplicaciones').attr("selected","selected");  
+                        $('.Aplicaciones-EstudiosBiblicos').attr("selected","selected"); 
+                    });
+                    
+                    $(".Aplicaciones-EstudiosBiblicos-Otros").click(function(){
+                        $('.Aplicaciones-EstudiosBiblicos').attr("selected","selected"); 
+                    });
+
+            //Estudios Bíblicos final
+            
+            
+        </script>
+    </body>
+    
+</html>

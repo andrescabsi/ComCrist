@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" />
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    </head>
+    
+    <body>
+        <form style="display: none;" id="contador_visitas_webapp" name="catcustomcontentform80326"
+        onsubmit="return checkWholeForm80326(this)" enctype="multipart/form-data" method="post"
+        action="/CustomContentProcess.aspx?A=EditSave&amp;CCID=16641&amp;OID={module_oid}&amp;OTYPE={module_otype}">
+            <label for="CAT_Custom_16">Visitantes</label>
+            <input type="text" maxlength="4000" name="CAT_Custom_16" id="CAT_Custom_16"
+            class="cat_textbox" />
+            <input class="cat_button" type="submit" value="Submit" id="catcustomcontentbutton"
+            />
+            <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+            <script type="text/javascript">
+                //<![CDATA[
+                var submitcount80326 = 0;
+                
+                function checkWholeForm80326(theForm) {
+                    var why = "";
+                    if (theForm.ItemName) why += isEmpty(theForm.ItemName.value, "Item Name");
+                    if (theForm.CAT_Custom_2) if (theForm.CAT_Custom_2.value.length > 0) why += isCurrency(theForm.CAT_Custom_2.value, "Precio");
+                    if (theForm.CAT_Custom_3) if (theForm.CAT_Custom_3.value.length > 0) why += isCurrency(theForm.CAT_Custom_3.value, "Precio Antes");
+                    if (why != "") {
+                        alert(why);
+                        return false;
+                    }
+                    if (submitcount80326 == 0) {
+                        submitcount80326++;
+                        theForm.submit();
+                        return false;
+                    } else {
+                        alert("Form submission is in progress.");
+                        return false;
+                    }
+                }
+                //]]>
+            </script>
+        </form>
+        <div class="contador_items_publicaciones">
+            <ul style="display: none;">
+                <li>
+                    <script id="script-contador" language="JavaScript" src="http://s1.freehostedscripts.net/ocount.php?site=ID2493708&name=Visits"></script>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                //Obtener valor numero visitantes
+                var contadorNumero = $(".contador_items_publicaciones ul:first a").text();
+                //alert(contadorNumero);
+                //Colocar valor en el input
+                $('input#CAT_Custom_16').val(contadorNumero);
+                //AUtorizacion
+                //jQuery.post('/ZoneProcess.aspx?ZoneID=-1', { Username: 'username', Password: 'password' });
+                //Enviar Formulario
+                //$("form#contador_visitas_webapp").submit();
+                
+            });
+        </script>
+    </body>
+    
+</html>

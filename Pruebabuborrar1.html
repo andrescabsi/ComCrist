@@ -1,0 +1,61 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript">
+
+$("document").ready(function(){
+    jqsub777()
+	var EIDinnov = $("#EntityIDCo").html();
+    console.log(EIDinnov);
+});    
+    
+
+
+    
+function jqsub777() {
+
+    var $form = $("#form_crm_usuario_pub"); // ID Formulario Entity ID
+    var $successmessage = "EID obtenido"; // replace with your own success message in HTML format
+    var $errormessage = "Error EID"; // replace with your own error message in HTML format
+    
+        $.ajax({
+            type: "POST",
+            url: $form.attr("action"),
+            data: $form.serialize(), 
+            success: function (msg) { 
+                if (typeof msg.FormProcessV2Response == "object") {
+                    var formResponse = eval(msg);
+                    
+                    if(msg.FormProcessV2Response.success){
+                        console.log($successmessage);
+                        var elEntiD = msg.FormProcessV2Response.entityId; //Obtener variable EntID
+                        
+                        $("#EntityIDCo").html(elEntiD); //Colocar variable en campo
+                        
+                    }
+                    else {
+                        console.log($errormessage);	
+                    }
+                	}},
+                
+            error: function (msg) {
+                	console.log($errormessage);
+            	}
+
+        });
+}
+</script>
+
+
+
+
+<!-- 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<p style="display:none;">Entity ID: <span id="EntityIDCo"></span></p>
+
+    
+<form style="display:none;" id="form_crm_usuario_pub" name="catwebformform8211" method="post" onsubmit="return checkWholeForm8211(this)"enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=106354&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}&JSON=1">
+        <input value="{module_emailaddress}" type="hidden" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255"/>
+</form>
+    
+    
+

@@ -1,0 +1,133 @@
+<manifest alg="2" build="328" opt="true" iceEnabled="true" exportTarget="BC" resolutions="1x" timestamp="1403565459892">
+  <folder name="assets">
+    <file name="arrow1.png" crc="4173436363" mt="1387633944000"/>
+    <file name="arrow2.png" crc="525997347" mt="1387633980000"/>
+    <file name="arrow3.png" crc="311715291" mt="1387634438000"/>
+    <file name="arrow4.png" crc="245935516" mt="1387634352000"/>
+    <file name="arrow5.png" crc="3762697530" mt="1387634398000"/>
+    <file name="bc-latest-blog-articles.tpl" crc="218697182" mt="1387564564000"/>
+    <file name="forms.css" crc="3873098778" mt="1370010102000"/>
+  </folder>
+  <folder name="_system">
+    <folder name="contentholders">
+      <file name="_u15931.html" crc="3872443424"/>
+      <file name="_u15932.html" crc="138177212"/>
+      <file name="_u16002.html" crc="474788523"/>
+      <file name="_u16007.html" crc="3977520325"/>
+      <file name="_u15937.html" crc="3890706086"/>
+      <file name="_u16031.html" crc="23304206"/>
+      <file name="_u16029.html" crc="19120588"/>
+      <file name="_u16026.html" crc="225690402"/>
+      <file name="_u16027.html" crc="3889615372"/>
+      <file name="_u16028.html" crc="4172842409"/>
+      <file name="_u16032.html" crc="448826181"/>
+      <file name="_u16069.html" crc="80330180"/>
+      <file name="_u16076.html" crc="4256372464"/>
+      <file name="_u16077.html" crc="534882982"/>
+      <file name="_u16025.html" crc="4219496782"/>
+      <file name="_u16048.html" crc="296897972"/>
+      <file name="_u16973.html" crc="4177329756"/>
+      <file name="_u19513.html" crc="204553218"/>
+      <file name="_u19506.html" crc="3848312863"/>
+    </folder>
+  </folder>
+  <folder name="templates">
+    <file name="main template.html" crc="4287207964"/>
+    <file name="desktop-tpl.html" crc="128083152"/>
+    <file name="desktop-tpl-zona-segura.html" crc="160142207"/>
+    <file name="desktop-tpl-categorias.html" crc="127895998"/>
+    <file name="desktop-tpl-subcategorias.html" crc="119014666"/>
+    <file name="desktop-blog.html" crc="3797890794"/>
+    <file name="desktop-tpl-publicaciones.html" crc="4052253250"/>
+    <file name="desktop-tpl-paso1.html" crc="4152339670"/>
+    <file name="desktop-tpl-paso2.html" crc="111816980"/>
+    <file name="desktop-tpl-paso3.html" crc="3766149194"/>
+    <file name="desktop-tpl-paso4.html" crc="3849143607"/>
+    <file name="desktop-tpl-paso5.html" crc="146012441"/>
+    <file name="desktop-tpl-paginas_informacion-util.html" crc="3954965332"/>
+    <file name="desktop-tpl-paginas_mas-de-nosotros.html" crc="3832972441"/>
+    <file name="desktop-tpl-paginas_comunidad.html" crc="4244243272"/>
+  </folder>
+  <folder name="css">
+    <file name="site_global.css" crc="4187922932"/>
+    <file name="index.css" crc="264822500" ref="index"/>
+    <file name="tpl.css" crc="4282299664" ref="tpl"/>
+    <file name="tpl-zona-segura.css" crc="41396528" ref="tpl-zona-segura"/>
+    <file name="inicio-sesion.css" crc="3982604802" ref="inicio-sesion"/>
+    <file name="iniciosesion.css" crc="426399698" ref="iniciosesion"/>
+    <file name="accesodenegado.css" crc="161704835" ref="accesodenegado"/>
+    <file name="resultado-busqueda.css" crc="3894320178" ref="resultado-busqueda"/>
+    <file name="tpl-categorias.css" crc="143204756" ref="tpl-categorias"/>
+    <file name="tpl-subcategorias.css" crc="14122166" ref="tpl-subcategorias"/>
+    <file name="estilos.css" crc="306047835" ref="estilos"/>
+    <file name="blog.css" crc="266206622" ref="blog"/>
+    <file name="iefonts_index.css" crc="4045644942" ref="index"/>
+    <file name="tpl-publicaciones.css" crc="495953022" ref="tpl-publicaciones"/>
+    <file name="master_maestra.css" crc="4190613447" ref="index:inicio-sesion:estilos:resultado-busqueda:blog:tpl-categorias:tpl:tpl-subcategorias:tpl-publicaciones:iniciosesion:accesodenegado:tpl-zona-segura:tpl-paso2:tpl-paso4:tpl-paso3:tpl-paso5:tpl-paso1:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="iefonts_resultado-busqueda.css" crc="4230206367" ref="resultado-busqueda"/>
+    <file name="iefonts_tpl.css" crc="459057127" ref="tpl"/>
+    <file name="iefonts_tpl-subcategorias.css" crc="459057127" ref="tpl-subcategorias"/>
+    <file name="iefonts_iniciosesion.css" crc="272398511" ref="iniciosesion"/>
+    <file name="iefonts_accesodenegado.css" crc="3826919906" ref="accesodenegado"/>
+    <file name="iefonts_blog.css" crc="459057127" ref="blog"/>
+    <file name="iefonts_inicio-sesion.css" crc="459057127" ref="inicio-sesion"/>
+    <file name="iefonts_estilos.css" crc="459057127" ref="estilos"/>
+    <file name="iefonts_tpl-publicaciones.css" crc="459057127" ref="tpl-publicaciones"/>
+    <file name="iefonts_tpl-categorias.css" crc="459057127" ref="tpl-categorias"/>
+    <file name="iefonts_tpl-zona-segura.css" crc="4022445763" ref="tpl-zona-segura"/>
+    <file name="tpl-paso2.css" crc="273115113" ref="tpl-paso2"/>
+    <file name="iefonts_tpl-paso2.css" crc="4100719764" ref="tpl-paso2"/>
+    <file name="tpl-paso4.css" crc="4078113022" ref="tpl-paso4"/>
+    <file name="iefonts_tpl-paso4.css" crc="4105015093" ref="tpl-paso4"/>
+    <file name="tpl-paso3.css" crc="519703377" ref="tpl-paso3"/>
+    <file name="iefonts_tpl-paso3.css" crc="56733100" ref="tpl-paso3"/>
+    <file name="tpl-paso5.css" crc="175278901" ref="tpl-paso5"/>
+    <file name="iefonts_tpl-paso5.css" crc="4061813167" ref="tpl-paso5"/>
+    <file name="tpl-paso1.css" crc="326137273" ref="tpl-paso1"/>
+    <file name="iefonts_tpl-paso1.css" crc="4100630715" ref="tpl-paso1"/>
+    <file name="sesion-cerrada.css" crc="112582815" ref="sesion-cerrada"/>
+    <file name="iefonts_sesion-cerrada.css" crc="4094399371" ref="sesion-cerrada"/>
+    <file name="tpl-paginas_informacion-util.css" crc="94638584" ref="tpl-paginas_informacion-util"/>
+    <file name="iefonts_tpl-paginas_informacion-util.css" crc="401417246" ref="tpl-paginas_informacion-util"/>
+    <file name="tpl-paginas_mas-de-nosotros.css" crc="4009243589" ref="tpl-paginas_mas-de-nosotros"/>
+    <file name="iefonts_tpl-paginas_mas-de-nosotros.css" crc="72967695" ref="tpl-paginas_mas-de-nosotros"/>
+    <file name="tpl-paginas_comunidad.css" crc="4187501349" ref="tpl-paginas_comunidad"/>
+    <file name="iefonts_tpl-paginas_comunidad.css" crc="3836109414" ref="tpl-paginas_comunidad"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="3850798583" ref="index:tpl:tpl-zona-segura:inicio-sesion:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:estilos:blog:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="museutils.js" crc="515783169" ref="index:tpl:tpl-zona-segura:inicio-sesion:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:estilos:blog:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="pie.js" crc="3827607177" ref="index:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:tpl-zona-segura"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="3953916557" ref="index"/>
+    <file name="jquery.watch.js" crc="4125239756" ref="index:tpl:tpl-zona-segura:inicio-sesion:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:estilos:blog:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="webpro.js" crc="114405901" ref="index"/>
+    <file name="musewpslideshow.js" crc="3797706250" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="254250306" ref="index"/>
+    <file name="touchswipe.js" crc="12843993" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="showcase-a-txt.png" crc="4056802713" ref="index"/>
+    <file name="dummie8.jpg" crc="3891059442" ref="index"/>
+    <file name="dummie9-1.jpg" crc="32907798" ref="index"/>
+    <file name="dummie9bn.jpg" crc="180856036" ref="index"/>
+    <file name="u15940.png" crc="4060265095" ref="index:inicio-sesion:tpl-zona-segura:tpl:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:blog:estilos:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="u15940-r.png" crc="321332988" ref="index:inicio-sesion:tpl-zona-segura:tpl:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:blog:estilos:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="showcase-a-a-u16845-fr.jpg" crc="269788946" ref="index"/>
+    <file name="showcase-a-b-u16847-fr.jpg" crc="3959616532" ref="index"/>
+    <file name="showcase-a-c-u16839-fr.jpg" crc="158912557" ref="index"/>
+    <file name="dummie5-u16841-fr.jpg" crc="359837359" ref="index"/>
+    <file name="u15940-a.png" crc="321332988" ref="index:tpl-zona-segura:inicio-sesion:tpl:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:blog:estilos:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="u19508.png" crc="4060265095" ref="index:tpl-zona-segura:inicio-sesion:tpl:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:blog:estilos:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="u19508-r.png" crc="321332988" ref="index:tpl-zona-segura:inicio-sesion:tpl:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:blog:estilos:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="u19508-a.png" crc="321332988" ref="index:tpl-zona-segura:inicio-sesion:tpl:iniciosesion:accesodenegado:resultado-busqueda:tpl-categorias:tpl-subcategorias:blog:estilos:tpl-publicaciones:tpl-paso1:tpl-paso2:tpl-paso3:tpl-paso4:tpl-paso5:sesion-cerrada:tpl-paginas_informacion-util:tpl-paginas_mas-de-nosotros:tpl-paginas_comunidad"/>
+    <file name="dummie9-1-ieu16419-fr.png" crc="176830925" ref="index"/>
+  </folder>
+  <file name="index.html" crc="205992561" mt="1403549084485" redirect="true"/>
+  <file name="inicio-sesion.html" crc="379809247" mt="1403549084486" redirect="true"/>
+  <file name="iniciosesion.html" crc="360547027" mt="1403549084488" redirect="true"/>
+  <file name="accesodenegado.html" crc="14176484" mt="1403549084488" redirect="true"/>
+  <file name="resultado-busqueda.html" crc="185873816" mt="1403549084489" redirect="true"/>
+  <file name="estilos.html" crc="4075136031" mt="1403549084492" redirect="true"/>
+  <file name="tpl-zona-segura.html" crc="110111805" mt="1400649200897" redirect="true"/>
+  <file name="sesion-cerrada.html" crc="4147182312" mt="1403549084498" redirect="true"/>
+</manifest>

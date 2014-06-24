@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>{tag_name}</title>
+        <!-- Owl Carousel CSS -->
+        <link href="/Wigets/owl/owl.carousel.css" type="text/css" rel="StyleSheet" style="">
+        <link href="/Wigets/owl/owl.theme.css" type="text/css" >
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    </head>
+    <body>
+        <p class="breadcrumbspublicaciones"><strong>Usted está aquí:</strong><a href="/">Inicio</a>|<span>{module_breadcrumbs}</span></p>
+        
+        <section class="categorias-columna-A">  
+                <!-- Sidebar Titulo y Subcategorias -->
+                <section class="categorias-columna-1">
+                    <div class="categorias-nombre-subcategorias">
+                        <h1 class="h2">{tag_name}</h1>
+                    </div>
+                    <div class="categorias-subcategorias">
+                        <ul>
+                            {module_webapps,17486,c,{tag_codigo categoria:},,,,10000,,1}
+                        </ul>
+                    </div>
+                </section>
+                    
+				<!-- Slider -->
+                <section class="categorias-columna-2">
+                    <div class="categorias-slider">
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            {module_webapps,Sliders,i,{tag_slider_id},,,true,1000,true,1}
+                        </div>
+                    </div>
+                </section>
+                    
+				<!-- Pauta Banners -->
+                <section class="categorias-columna-3">
+                    <div class="categorias-pauta">
+                    {module_webapps,Pauta - Banners,i,{tag_pauta 1_id} template="/ModuleTemplates/PautaBanners/banner-estandar-{tag_visible 1}.tpl"}
+                    </div>
+                </section>
+                
+				<!-- Sección Inferior -->
+                <section class="categorias-recomendados">
+                    <div class="categorias-recomendados-titulo">
+                        <h2 class="h2">Recomendados</h2>
+                    </div>
+                    <div class="categorias-recomendados-codigo">
+                        
+                        <!-- OWL RECOMENDADOS 1 -->
+                        <ul id="owl-recomendados1" class="owl-carousel owl-theme">
+							{module_webapps,16641,c,{tag_recomendados 1},,,,100,,1  template="/ModuleTemplates/Webapps/Publicaciones/publicaciones-listado-cuadro-slider.tpl"}
+                        </ul>
+                        <!-- /OWL RECOMENDADOS 1 -->
+                        
+                        <!-- OWL RECOMENDADOS 2 -->
+                        <ul id="owl-recomendados2" class="owl-carousel owl-theme">
+							{module_webapps,16641,c,{tag_recomendados 2},,,,100,,1  template="/ModuleTemplates/Webapps/Publicaciones/publicaciones-listado-cuadro-slider.tpl"}
+                        </ul>
+                        <!-- /OWL RECOMENDADOS 2 -->
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="categorias-publicaciones">
+                    <div class="categorias-publicaciones-titulo">
+                        <h2 class="h2">Publicaciones</h2>
+                    </div>
+                    <div class="categorias-publicaciones-codigo">
+                        <!-- CODIGO CATEGORIA -->
+                        {module_webapps,16641,c,{tag_codigo categoria:},,,,1000,true,1  template="/ModuleTemplates/Webapps/Publicaciones/publicaciones-listado-cuadro-slider.tpl"}
+                        <!-- /CODIGO CATEGORIA -->
+                    </div>
+                </section>
+                
+                <section class="categorias-publicaciones">
+                    <div class="categorias-publicaciones-titulo">
+                        <h2 class="h2">Anunciantes</h2>
+                    </div>
+                    <div class="categorias-publicaciones-codigo">
+                        <!-- CODIGO ANUNCIANTES -->
+                        {module_webapps,16609,c,112782,,,,100,true,1}
+                        <!-- /CODIGO ANUNCIANTES -->
+                    </div>
+                </section>
+
+        </section>
+        
+<script>
+    $(document).ready(function() {
+     
+// Owl Carousel slider
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+      $("#owl-demo").owlCarousel({
+     
+          slideSpeed : 300,
+          paginationSpeed : 400,
+          singleItem:true,
+		  pagination : true,
+          paginationNumbers: false,
+		  navigation : true,
+		  navigationText : ["<img alt='Anterior' src='/Imagenes/iconos/siguiente3.png'>","<img alt='Siguiente' src='/Imagenes/iconos/siguiente4.png'>"],
+		  rewindNav : true,
+          //Autoplay
+		  autoPlay : true,
+		  stopOnHover : true,
+     
+          // "singleItem:true" is a shortcut for:
+          // items : 1, 
+          // itemsDesktop : false,
+          // itemsDesktopSmall : false,
+          // itemsTablet: false,
+          // itemsMobile : false
+     
+      });
+        
+        
+               
+// Owl Carousel Recomendados 1
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+      var owl = $("#owl-recomendados1");
+     
+      owl.owlCarousel({
+          items : 6, //10 items above 1000px browser width
+          responsive: false,
+          //Autoplay
+		  autoPlay : false,
+          navigation : true,
+		  navigationText : ["<img alt='Anterior' src='/Imagenes/iconos/siguiente11.png'>","<img alt='Siguiente' src='/Imagenes/iconos/siguiente22.png'>"],
+		  rewindNav : true,
+      });
+     
+      // Custom Navigation Events
+      $(".next1").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev1").click(function(){
+        owl.trigger('owl.prev');
+      })
+      
+// Owl Carousel Recomendados 2
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+   	  var owl2 = $("#owl-recomendados2");
+     
+      owl2.owlCarousel({
+          items : 6, //10 items above 1000px browser width
+          responsive: false,
+          //Autoplay
+		  autoPlay : false,
+          navigation : true,
+		  navigationText : ["<img alt='Anterior' src='/Imagenes/iconos/siguiente11.png'>","<img alt='Siguiente' src='/Imagenes/iconos/siguiente22.png'>"],
+		  rewindNav : true,
+      });
+     
+      // Custom Navigation Events
+      $(".next2").click(function(){
+        owl2.trigger('owl.next');
+      })
+      $(".prev2").click(function(){
+        owl2.trigger('owl.prev');
+      })
+            
+        
+        
+        
+     
+});
+    
+</script>
+        
+</body>
+</html>

@@ -1,0 +1,33 @@
+<section class="section">
+	<h1 class="h1">{module_pagename}</h1>
+	<h4 class="h4">En Comercio Cristiano tu eres nuestra prioridad</h4>
+</section>
+<section class="c1_completa_tu_perfil">
+<p class="p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.  quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+</section>
+<section class="c2_completa_tu_perfil">
+<h4 class="h4">Solicitud de servicio</h4>
+<form name="catwebformform71987" method="post" onsubmit="return checkWholeForm71987(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=169307&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}">
+    <input placeholder="Nombre" type="text" name="FirstName" id="FirstName" value="{module_firstname}" class="cat_textbox" maxlength="255" />
+    <input placeholder="Apellido" type="text" name="LastName" id="LastName" value="{module_lastname}" class="cat_textbox" maxlength="255" />
+    <input placeholder="Correo" type="email" name="EmailAddress" id="EmailAddress" value="{module_emailaddress}" class="cat_textbox" maxlength="255" />
+    {module_ccsecurity}
+    <textarea placeholder="Escribe tu solicitud aqu&iacute;" name="CAT_Custom_491814" id="CAT_Custom_491814" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea>
+    <button class="boton_amarillo" type="submit" id="catwebformbutton">Enviar Solicitud</button>
+</form>
+</section>
+<section class="section">
+<h2 class="h2">Historial de Servicio</h2>
+<table>
+    <tbody>
+        <tr>
+            <td style="width: 87px;"><strong># Caso&nbsp;</strong></td>
+            <td style="width: 260px;"><strong>&nbsp;Asunto</strong></td>
+            <td style="width: 180px;"><strong>Fecha de creaci&oacute;n&nbsp;</strong></td>
+            <td style="width: 180px;"><strong>&nbsp;&Uacute;ltima Actualizaci&oacute;n</strong></td>
+            <td style="width: 120px;"><strong>&nbsp;Estado</strong></td>
+        </tr>
+    </tbody>
+</table>
+{module_case,a,,1457355}
+</section>

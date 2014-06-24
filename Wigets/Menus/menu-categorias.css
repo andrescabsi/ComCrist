@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.agrupacion_contenidos_ul{
+	text-align: center;
+}
+
+.cuadro_categoria_amarillo{
+	width: 160px;
+	height: 142px;
+	border-color: #000000;
+	background-color: #FFDB01;
+	margin-right: -10000px;
+	padding: 17px 6px 11.000000000000256px 8px;
+    display: inline-block;
+    margin:9px;
+    vertical-align: top;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.cuadro_categoria_amarillo:hover{
+	background-color: #000000;
+}
+
+.cuadro_categoria_amarillo a, .cuadro_categoria_amarillo{
+    color: #000000;
+    font-family: open-sans, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cuadro_categoria_amarillo a:hover, .cuadro_categoria_amarillo:hover{
+    color: #fff;
+}
+
+.circulo_menu_categorias{
+    width: 111px;
+    height: 110px;
+    border: solid white 2px;
+    border-radius: 50%;
+    text-align: center;
+	line-height: 14.4;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+
+/*Categoria Negro*/
+
+.cuadro_categoria_negro{
+	width: 160px;
+	height: 142px;
+	border-color: #000000;
+	background-color: #000000;
+	margin-right: -10000px;
+	padding: 17px 6px 11.000000000000256px 8px;
+    display: inline-block;
+    margin:9px;
+    vertical-align: top;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.cuadro_categoria_negro:hover{
+	background-color: #000000;
+}
+
+.cuadro_categoria_negro a, .cuadro_categoria_negro{
+    color: #fff;
+    font-family: open-sans, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cuadro_categoria_negro a:hover, .cuadro_categoria_negro:hover{
+    color: #ccc;
+}

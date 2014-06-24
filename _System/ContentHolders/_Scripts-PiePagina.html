@@ -1,0 +1,237 @@
+<!--SCRIPTS PIE DE PÁGINA (SOLO SCRIPTS)-->
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+
+	boton_menu_categorias_show();
+	IdentVacioImagenes();
+         
+      // Intercambiador de contenidos dependiendo si esta loggeado o no
+      // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+      
+
+        var estaLoggeado = "{module_isloggedin}"
+        
+        if (estaLoggeado == "1") {
+            $(".contenidoLoggeado").show();
+            $(".contenidoPublico").remove();
+            //Boton Publicar
+            $("a#botonPublicarRegistro").attr("href", "/Usuarios/Publicaciones/nueva-publicacion.htm").text("PUBLICA TU ANUNCIO GRATIS");
+        }else {
+            $(".contenidoLoggeado").remove();
+            $(".contenidoPublico").show();
+            //Boton Registrarme
+            $("a#botonPublicarRegistro").attr("href", "/registro.html").text("REGISTRARME");
+        };
+
+        
+        
+        // Isotope
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+        //Descripción: El ID Container aqui abajo se debe colocar en el contenedor del codigo donde se imprimen las publicaciones, en la plantilla de subcategorias.
+        
+        
+        var $container = $('#container-publicaciones, #container-publicaciones2');
+        // initialize isotope
+        $container.isotope({});
+        
+        // filters Apunta a la lista de filtros lateral
+        $('#filters a').click(function() {
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector
+            });
+            return false;
+        });
+        
+        
+        $("#container-publicaciones li").css('transform', 'none');
+        $("#container-publicaciones li").css('-webkit-transform', 'none');
+        
+        
+        
+        // Conexion Anunciantes - Publicaciones
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+        var itemID = $('#item-id').data('item-id');
+        
+        $('.related li').hide();
+        
+        $('.related li').each(function() {
+            var relatedID = $(this).data('related-id');
+            if (relatedID != itemID) {
+                $(this).remove();
+            } else {
+                $(this).show();
+            }
+        });
+        
+        // Formato Moneda
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        $(function($) {
+            $('.currency-interno').autoNumeric('init');
+        });
+        
+        $("#boton-listado").click(function() {
+            $('.currency-interno2').autoNumeric('init');
+        });
+        
+                                    /*
+                                    // Limitar caracteres 
+                                    // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+                                    
+                                    $(function() {
+                                        $('.dot1').dotdotdot();
+                                        $('#dot2').dotdotdot();
+                                        $('#dot3').dotdotdot({
+                                            after: 'a.readmore'
+                                        });
+                                        $('#dot4').dotdotdot({
+                                            watch: 'window'
+                                        });
+                                        $('#dot5 .pathname').each(function() {
+                                            var path = $(this).html().split('/');
+                                            if (path.length > 1) {
+                                                var name = path.pop();
+                                                $(this).html(path.join('/') + '<span class="filename">/' + name + '</span>');
+                                                $(this).dotdotdot({
+                                                    after: '.filename',
+                                                    wrap: 'letter'
+                                                });
+                                            }
+                                        });
+                                    });
+                                    
+                                    */
+        
+        // Filtros Ciudades 
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+        $(function() {
+            $("#ver-mas-ciudades").click(function() {
+                $(".contenedor-ciudades-menos").attr("class", "contenedor-ciudades-mas");
+                $("#ver-menos-ciudades").show();
+                $("#ver-mas-ciudades").hide();
+                return false;
+            });
+        });
+        
+        $(function() {
+            $("#ver-menos-ciudades").click(function() {
+                $(".contenedor-ciudades-mas").attr("class", "contenedor-ciudades-menos");
+                $("#ver-mas-ciudades").show();
+                $("#ver-menos-ciudades").hide();
+                return false;
+            });
+        });
+        
+        
+        
+        // Ocultar el numero de ciudades y agregar boton de ver mas y ver menos. 
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+        var items = 200; // Load the first 5 list items from another HTML file
+        var shown = 10; //$('#filters').load('externalList.html li:lt(5)');
+        
+        $('#filters li:lt(10)').show();
+        $('#showLess').hide();
+        
+        $('#loadMore').click(function() {
+            $('#showLess').show();
+            shown = $('#filters li:visible').size() + items;
+            if (shown < items) {
+                $('#filters li:lt(' + shown + ')').show();
+            } else {
+                $('#filters li:lt(' + items + ')').show();
+            }
+            $('#loadMore').hide();
+        });
+        $('#showLess').click(function() {
+            $('#filters li').not(':lt(10)').hide();
+            $('#loadMore').show();
+            $('#showLess').hide();
+        });
+        
+        // Ocultar ciudades con 0 publicaciones 
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        $(".numerociudadesj:contains('0')").parent().hide();
+        
+        
+        // ORDENAR POR PRECIO 
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+        
+        // DENUNCIAR PUBLICACIÓN
+        // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::      
+        $( "#boton_denunciar_publicacion" ).click(function() {
+            $("#denunciarPublicacion_item").toggle("slow");
+            //$(this).text('Ocultar');
+        });
+
+        // ARREGLO BREADCRUMBS PUBLICACIONES 
+        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+        
+        // fake breadcrumbs - publicaciones
+		 if(jQuery(".publicaciones-detail").length > 0){
+			  var curBreadCrumbs = jQuery("nav.breadcrumbs-a p").html();
+			  var breadCrumbs =      "<p><a href='/'>Inicio</a> <span>|</span> <a href='/publicaciones'>Publicaciones</a> <span>|</span> <a href='#'>"+curBreadCrumbs+"</a></p>";
+			  jQuery("nav.breadcrumbs-a").html(breadCrumbs);
+		 }
+        
+        
+        
+      	var $mail = $("#mail");
+        
+        $("#email").blur(function() {
+    		$mail.val( this.value );
+		});
+        
+
+        $("#email").keyup(function() {
+            $mail.val( this.value );
+        });
+    
+        
+        
+        /* Javascript Slider Thumbnail */
+		$('#cr-container').crotator({
+			// slideshow on
+			autoplay: true
+		});
+        
+        
+        
+        
+	
+        
+    });
+    
+    
+   
+    
+    function IdentVacioImagenes(){
+    
+        // Eliminar fotos vacías
+        //************************************
+		$("img[src='?Action=thumbnail&Width=130&Height=94&algorithm=fill_proportional']").remove();
+        $("img[src='?Action=thumbnail&Width=600&Height=400&algorithm=fill_proportional']").parent().remove();
+    	$("img[src='?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional']").attr("src", "http://comcristiano.businesscatalyst.com/Imagenes/Dummies/placeholder_image1_New.png?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional");
+    }
+    
+    //MOSTRAR MENU CATEGORIAS BOTON
+    function boton_menu_categorias_show(){
+        
+        $(".button_menu_categorias").click(function(){
+        	$("#menu_categorias_home_ppal").fadeToggle();
+        });
+    
+    }
+
+
+    
+    
+    
+    
+
+</script>

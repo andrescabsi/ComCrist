@@ -1,0 +1,15 @@
+<div class="busqueda-ppal-filtro">
+<form name="catcustomcontentform21173" method="post" onsubmit="return checkWholeForm21173(this)" action="/Default.aspx?CCID=16641&amp;FID=173166&amp;ExcludeBoolFalse=True&amp;PageID={module_oid}">
+    <label for="CAT_Category"><strong>Categor&iacute;a</strong></label>
+    <br />
+    <select name="CAT_Category" id="CAT_Category" class="cat_listbox">{module_categorylist}</select>
+    <label><strong>Precio M&iacute;n:</strong></label>
+    <br />
+    <input type="text" maxlength="255" name="CAT_Custom_2_Min" id="CAT_Custom_2_Min" class="cat_textbox" />
+    <label><strong>Precio M&aacute;x:</strong></label>
+    <input type="text" maxlength="255" name="CAT_Custom_2_Max" id="CAT_Custom_2_Max" class="cat_textbox" />
+    <button class="boton_amarillo" type="submit">Filtrar</button>
+</form>
+<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+<script type="text/javascript">function checkWholeForm21173(theForm){var why = "";if (theForm.CAT_Custom_2_Min) if (theForm.CAT_Custom_2_Min.value.length > 0) why += isFloat(theForm.CAT_Custom_2_Min.value, "Precio");if (theForm.CAT_Custom_2_Max) if (theForm.CAT_Custom_2_Max.value.length > 0) why += isFloat(theForm.CAT_Custom_2_Max.value, "Precio");if (theForm.CAT_Custom_3_Min) if (theForm.CAT_Custom_3_Min.value.length > 0) why += isFloat(theForm.CAT_Custom_3_Min.value, "Precio Antes");if (theForm.CAT_Custom_3_Max) if (theForm.CAT_Custom_3_Max.value.length > 0) why += isFloat(theForm.CAT_Custom_3_Max.value, "Precio Antes");if (why != ""){alert(why);return false;}return true;}</script>
+</div>

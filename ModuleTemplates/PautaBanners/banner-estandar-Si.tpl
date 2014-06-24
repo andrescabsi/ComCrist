@@ -1,0 +1,1 @@
+<a class="contenedor_imagen_pautas_banners" href="{tag_enlace}" target="_blank"><img class="imagen_pautas_banners" alt="" src="{tag_imagen_value}?Action=thumbnail&amp;Width={tag_ancho}&amp;Height={tag_alto}&amp;algorithm=fill_proportional" /></a>

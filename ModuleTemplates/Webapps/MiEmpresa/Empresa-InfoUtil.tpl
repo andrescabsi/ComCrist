@@ -1,0 +1,1 @@
+<img alt="Comercio Cristiano" src="{tag_info-util 1040 x 171_value}?Action=thumbnail&amp;Width=1040&amp;Height=171&amp;algorithm=fill_proportional">
