@@ -103,35 +103,28 @@
 <script type="text/template" id="listado-template">
 
     <% _.each(list,function(item){  %>
-        <li class="contenedor_publicaciones_listado">
-            <div class="contenido_publicaciones_listado">
 
-                <div class="contenedortitulo_publicaciones_listado">
-                    <div class="contenedortitulo1_publicaciones_listado">
-                        <p class="titulo_publicaciones_listado"><a href="<%-item.enlace%>">Listado<%-item.nombre%></a></p>
+        <li class="tpl_listado_contenedor"> 
+            <div class="shadow" id="innov13253">
+                    <div class="columna1-anuncio">
+                        <img class="imagen-anuncio" src="<%-item.imagen%>?Action=thumbnail&Width=210&Height=186&algorithm=fill_proportional" />
+                    </div>
+                    <div class="columna2-anuncio">
+                        <h3 class="titulo-anuncio"><a href="<%-item.enlace%>"><%-item.nombre%></a></h3> 
+                        
+                        <p data-a-sign="$" data-m-dec="0" vMax="9999999999999" data-a-dec="," data-a-sep="." class="currency-interno2" style="display: inline-block;margin-right:10px;"><%-item.precio%></p>
+                        <p id="precioAntes" data-a-sign="$" data-m-dec="0" vMax="9999999999999" data-a-dec="," data-a-sep="." class="currency-interno2"><%-item.precioantes%></p>
+                        
+                        <p class="cuerpo-anuncio"><%-item.resumenpublicacion%></p>
+                        <div class="footer-anuncio">
+                            <img class="icono-calendario-anuncio" alt="" src="/Imagenes/App/calendario-u5282.png" width="10" height="10">
+                            <span class="fecha-anuncio"><%-item.ulactualizacion%></span><span class="autor-anuncio"><%-item.estado%></span>                            
+                        </div>
+
                     </div>
                 </div>
-                
-                <div class="contenedorimagen_publicaciones_listado">
-                    <a href="<%-item.enlace%>"><img class="imagen_publicaciones_listado" src="<%-item.imagen%>?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional"></a>
-                </div>
-
-                <div class="contenedorautor_publicaciones_listado">
-                    <span class="autor_publicaciones_listado"><%-item.estado%></span>
-                    <span class="fecha_publicaciones_listado"><%-item.ulactualizacion%></span>
-                </div>
-
-                <div class="contenedorprecio_publicaciones_listado">
-                    <span data-a-sign="$" data-m-dec="0" vMax="999999999" data-a-dec="," data-a-sep="." class="currency-interno precioahora_publicaciones_listado"><%-item.precio%></span>
-                    <span class="ciudad_publicaciones_listado"><%-item.ciudad%></span>
-                </div>
-
-                <div class="contenedorboton_publicaciones_listado">
-                    <a href="<%-item.enlace%>"><button class="vermas_publicaciones_listado">Ir</button></a>
-                </div>
-
-            </div>
         </li>
+
     <% }) %>
 
 </script>

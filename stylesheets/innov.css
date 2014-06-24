@@ -1210,3 +1210,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     cursor: pointer;
 }
 
+.tpl_listado_contenedor{
+    list-style: none;
+    margin-bottom: 10px;
+}
+

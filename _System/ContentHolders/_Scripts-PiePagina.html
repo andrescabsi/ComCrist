@@ -23,33 +23,7 @@
             $("a#botonPublicarRegistro").attr("href", "/registro.html").text("REGISTRARME");
         };
 
-        
-        
-        // Isotope
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-        
-        //Descripción: El ID Container aqui abajo se debe colocar en el contenedor del codigo donde se imprimen las publicaciones, en la plantilla de subcategorias.
-        
-        
-        var $container = $('#container-publicaciones, #container-publicaciones2');
-        // initialize isotope
-        $container.isotope({});
-        
-        // filters Apunta a la lista de filtros lateral
-        $('#filters a').click(function() {
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector
-            });
-            return false;
-        });
-        
-        
-        $("#container-publicaciones li").css('transform', 'none');
-        $("#container-publicaciones li").css('-webkit-transform', 'none');
-        
-        
-        
+                
         // Conexion Anunciantes - Publicaciones
         // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
         
@@ -104,63 +78,6 @@
                                     
                                     */
         
-        // Filtros Ciudades 
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-        
-        $(function() {
-            $("#ver-mas-ciudades").click(function() {
-                $(".contenedor-ciudades-menos").attr("class", "contenedor-ciudades-mas");
-                $("#ver-menos-ciudades").show();
-                $("#ver-mas-ciudades").hide();
-                return false;
-            });
-        });
-        
-        $(function() {
-            $("#ver-menos-ciudades").click(function() {
-                $(".contenedor-ciudades-mas").attr("class", "contenedor-ciudades-menos");
-                $("#ver-mas-ciudades").show();
-                $("#ver-menos-ciudades").hide();
-                return false;
-            });
-        });
-        
-        
-        
-        // Ocultar el numero de ciudades y agregar boton de ver mas y ver menos. 
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-        
-        var items = 200; // Load the first 5 list items from another HTML file
-        var shown = 10; //$('#filters').load('externalList.html li:lt(5)');
-        
-        $('#filters li:lt(10)').show();
-        $('#showLess').hide();
-        
-        $('#loadMore').click(function() {
-            $('#showLess').show();
-            shown = $('#filters li:visible').size() + items;
-            if (shown < items) {
-                $('#filters li:lt(' + shown + ')').show();
-            } else {
-                $('#filters li:lt(' + items + ')').show();
-            }
-            $('#loadMore').hide();
-        });
-        $('#showLess').click(function() {
-            $('#filters li').not(':lt(10)').hide();
-            $('#loadMore').show();
-            $('#showLess').hide();
-        });
-        
-        // Ocultar ciudades con 0 publicaciones 
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-        $(".numerociudadesj:contains('0')").parent().hide();
-        
-        
-        // ORDENAR POR PRECIO 
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-
-        
         // DENUNCIAR PUBLICACIÓN
         // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::      
         $( "#boton_denunciar_publicacion" ).click(function() {
@@ -168,10 +85,6 @@
             //$(this).text('Ocultar');
         });
 
-        // ARREGLO BREADCRUMBS PUBLICACIONES 
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-
-        
         // fake breadcrumbs - publicaciones
 		 if(jQuery(".publicaciones-detail").length > 0){
 			  var curBreadCrumbs = jQuery("nav.breadcrumbs-a p").html();

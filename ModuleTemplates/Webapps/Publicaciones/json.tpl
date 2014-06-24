@@ -7,5 +7,7 @@
 	'imagen' : '{tag_imagen_value}',
 	'ulactualizacion' : '{tag_lastupdatedate}',
 	'precio' : '{tag_precio}',
+	'precioantes' : '{tag_precio antes}',
+	'resumenpublicacion' : '{tag_resumen publicacion}',
 	'ciudad' : '{tag_ciudad}'
 },
