@@ -1,3 +1,4 @@
+
 <li data-related-id="{tag_anunciantes_id}" class="contenedor_publicaciones_listado id-{tag_anunciantes_id} {tag_estado} {tag_ciudad}">
 		<div class="contenido_publicaciones_listado">
 			<span class="topseller_publicaciones_listado"></span>
@@ -26,4 +27,5 @@
                 <a href="{tag_itemurl_withhost}"><button class="vermas_publicaciones_listado">Ir</button></a>
 			</div>
 		</div>
+
 </li>
