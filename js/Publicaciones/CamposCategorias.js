@@ -17,11 +17,20 @@ $(document).ready(function() {
     // Enlace Categoria
     //************************************
     enlace_categoriaPublicacionActual();
-
+    // Eliminar imagenes vacias detalle publicaciones
+    //************************************
+    quitar_imagenes_vacias_thumb();
 
         
 });
 
+
+function quitar_imagenes_vacias_thumb(){
+
+        // Eliminar fotos vacías
+        //************************************
+
+};
 
 // Enlace categoria breadcrumbs
 //************************************
