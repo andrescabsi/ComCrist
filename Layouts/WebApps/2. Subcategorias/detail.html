@@ -7,8 +7,7 @@
 
 <p class="breadcrumbspublicaciones"><strong>Usted está aquí:</strong><a href="/">Inicio</a> |  {tag_nombre categoria:}  |  <span>{module_breadcrumbs}</span></p>
 
-
-<section class=" sections subcategorias-columna-A">
+<section class="sections subcategorias-columna-A">
 
     <h2 class="h2">{tag_nombre categoria:}</h2>
     <ul>
@@ -42,10 +41,10 @@
                 <img class="boton-cuadro" id="btn-cuadro" src="/Imagenes/iconos/Vista2.png" alt="Vista Cuadro" height="10" width="10" />
                 <img class="boton-listado" id="btn-listado" src="/Imagenes/iconos/Vista1.png" alt="Vista Listado" height="10" width="10" />
                 <select name="Organizar" id="listado_organizar_publicaciones">
-                    <option id="listado_organizar_publicaciones_recientes" value="">Más recientes</option>
-                    <option id="listado_organizar_publicaciones_menorp" value="">Menor Precio</option>
-                    <option id="listado_organizar_publicaciones_mayorp" value="">Mayor Precio</option>
-                    <option id="listado_organizar_publicaciones_mayorp" value="">Órden Alfabético</option>
+                    <option id="listado_organizar_publicaciones_recientes" value="listado_organizar_publicaciones_recientes">Más recientes</option>
+                    <option id="listado_organizar_publicaciones_menorp" value="listado_organizar_publicaciones_menorp">Menor Precio</option>
+                    <option id="listado_organizar_publicaciones_mayorp" value="listado_organizar_publicaciones_mayorp">Mayor Precio</option>
+                    <option id="listado_organizar_publicaciones_mayorp" value="listado_organizar_publicaciones_mayorp">Órden Alfabético</option>
                 </select>
             </div>
             <div>
@@ -87,7 +86,6 @@
                     <span data-a-sign="$" data-m-dec="0" vMax="999999999" data-a-dec="," data-a-sep="." class="currency-interno precioahora_publicaciones_listado"><%-item.precio%></span>
                     <span class="ciudad_publicaciones_listado"><%-item.ciudad%></span>
                 </div>
-
                 <div class="contenedorboton_publicaciones_listado">
                     <a href="<%-item.enlace%>"><button class="vermas_publicaciones_listado">Ir</button></a>
                 </div>
@@ -130,11 +128,10 @@
 </script>
 <!-- /PLANTILLA LISTADO -->
 
-
-
 <!-- SCRIPT UNDERSCORE -->
 <script>
-    
+
+
     var list = [{module_webapps,16641,c,{tag_codigo subcategoria},,,,1000,,1 template="/ModuleTemplates/Webapps/Publicaciones/json.tpl"}];
 
     /* FILTROS
@@ -169,10 +166,17 @@
         //return item.precio;
     //});
 
-    //Organizar por precio de mayor a menor
-    list = _.sortBy(list,function(item){
-        return -item.precio;
+    $("#holau").click(function(){
+        list = _.sortBy(list,function(item){
+            return item.precio;
+        });
     });
+    
+
+    //Organizar por precio de mayor a menor
+    //list = _.sortBy(list,function(item){
+        //return -item.precio;
+    //});
 
     /* IMPRIMIR LOS RESULTADOS Y SELECTOR DE PLANTILLAS
     **************************************************************************************/
@@ -192,5 +196,9 @@
         $(".contenedor_publicaciones_underscore").html(template); // Imprime en Div
     });
 
+
+
+
 </script>
 <!-- /SCRIPT UNDERSCORE -->
+
