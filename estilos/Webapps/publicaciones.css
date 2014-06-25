@@ -267,7 +267,7 @@ strong{
 
 }
 
-.descripcion_item_publicacion, .iframeFacebook_comentarios, .OtrasPublicacionesVendedor, .recomendados_detallepublicacion, .pauta_detalle_publicaciones {
+.descripcion_item_publicacion, .OtrasPublicacionesVendedor, .recomendados_detallepublicacion, .pauta_detalle_publicaciones {
 	width: 1130px;
 	/*-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.62);
 	-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.62);
@@ -281,8 +281,41 @@ strong{
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-
 }
+
+.iframeFacebook_comentarios{
+	width: 51%;
+	/*-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.62);
+	-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.62);
+	box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.62);*/
+	display: inline-block;
+	min-height: 200px;
+	background-color: white;
+	margin-bottom: 20px;
+	padding: 25px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.iframeFacebook_comentarios2{
+	width: 40%;
+	/*-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.62);
+	-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.62);
+	box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.62);*/
+	display: inline-block;
+	min-height: 249px;
+	background-color: white;
+	margin-bottom: 20px;
+	padding: 25px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    vertical-align: top;
+}
+
 .garantia_item{
 	background-color: orange;
 	font-weight: bold;
@@ -409,34 +442,6 @@ strong{
 	margin-left: 10px;
 }
 
-.breadcrumbspublicaciones {
-	padding: 10px;
-	background-color: white;
-    margin: 20px 0px;
-    background: #ffffff;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-}
-
-.breadcrumbspublicaciones a, .item_publicadoPor a {
-	color: #29ABE2;
-}
-
-.breadcrumbspublicaciones a:hover {
-	color: #29ABE2;
-}
-
-.breadcrumbspublicaciones a:first-child {
-	padding-left: 5px;
-}
-
-.breadcrumbspublicaciones span, .separador_publicaciones_item {
-	color: #E2E2E2;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top:2px;
-}
 #denunciarPublicacion_item{
     background-color: #E9E9E9;
     padding: 33px 177px;

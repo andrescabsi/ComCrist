@@ -61,7 +61,7 @@
 <span style="display:none;" class="publiNom">{tag_name}</span>
 <span style="display:none;" class="publiID">{tag_itemid}</span>
 
-<p class="breadcrumbspublicaciones"><a href="/">Categorías</a>  <span>|</span>  <a href="/">{tag_codigo_categoria}</a>  <span>|</span>  <a href="/">{tag_subcategoria}</a>  <span>|</span> <span style="color:#7E7E7E;">{module_breadcrumbs}</span></p>
+<p class="breadcrumbspublicaciones"><strong>Usted está aquí:</strong><a href="/">Inicio</a> |  {tag_codigo_categoria}  |  {tag_subcategoria}  |  <span>{module_breadcrumbs}</span></p>
 
 <section id="tpl_publicaciones_detalle">
 
@@ -167,40 +167,40 @@
                             <article data-categoria="Bienes-Raices">
                                 
                                 <h4>Ubicación del inmueble</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                                <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                                <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                                <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                                <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                                <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                                <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                                <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                                <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                                         
                                 <h4>Teléfonos de contacto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                             
                                 <h4>Características inmueble</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Metros construidos: </strong><span>{tag_metros construidos}</span></p>
-                                        <p><strong>Metros terreno: </strong><span>{tag_metros terreno}</span></p>
-                                        <p><strong>Años de construido: </strong><span>{tag_anos de construido}</span></p>
-                                        <p><strong>Baños: </strong><span>{tag_banos}</span></p>
-                                        <p><strong>Habitaciones: </strong><span>{tag_habitaciones}</span></p>
-                                        <p><strong>Pisos (Habitaciones): </strong><span>{tag_pisos (cuartos)}</span></p>
-                                        <p><strong>Lineas telefónicas: </strong><span>{tag_lineas telefonicas}</span></p>
-                                        <p><strong>Pisos (Áreas Sociales): </strong><span>{tag_pisos (areas sociales):}</span></p>
-                                        <p><strong>Estrato: </strong><span>{tag_estrato:}</span></p>
-                                        <p><strong>Nombre del inmueble: </strong><span>{tag_nombre del inmueble:}</span></p>
-                                        <p><strong>Habitaciones de servicio: </strong><span>{tag_habitaciones de servicio:}</span></p>
-                                        <p><strong>Ascensores: </strong><span>{tag_ascensores:}</span></p>
-                                        <p><strong>Negociable: </strong><span>{tag_negociable:}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Metros construidos: </strong><span>{tag_metros construidos}</span></li>
+                                        <li><strong>Metros terreno: </strong><span>{tag_metros terreno}</span></li>
+                                        <li><strong>Años de construido: </strong><span>{tag_anos de construido}</span></li>
+                                        <li><strong>Baños: </strong><span>{tag_banos}</span></li>
+                                        <li><strong>Habitaciones: </strong><span>{tag_habitaciones}</span></li>
+                                        <li><strong>Pisos (Habitaciones): </strong><span>{tag_pisos (cuartos)}</span></li>
+                                        <li><strong>Lineas telefónicas: </strong><span>{tag_lineas telefonicas}</span></li>
+                                        <li><strong>Pisos (Áreas Sociales): </strong><span>{tag_pisos (areas sociales):}</span></li>
+                                        <li><strong>Estrato: </strong><span>{tag_estrato:}</span></li>
+                                        <li><strong>Nombre del inmueble: </strong><span>{tag_nombre del inmueble:}</span></li>
+                                        <li><strong>Habitaciones de servicio: </strong><span>{tag_habitaciones de servicio:}</span></li>
+                                        <li><strong>Ascensores: </strong><span>{tag_ascensores:}</span></li>
+                                        <li><strong>Negociable: </strong><span>{tag_negociable:}</span></li>
+                                    </ul>
                             
                                 <h4>Características adicionales</h4>
                                     <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>{tag_caracteristicas adicionales}</strong></p>
+                                        <p>{tag_caracteristicas adicionales}</p>
                                     </div>
                             
                                 <h4>Cercanías a menos de dos cuadras</h4>
@@ -219,19 +219,19 @@
                             <article data-categoria="Vehiculos">
                                 
                                 <h4>Ubicación del vehículo</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                             
                                 <h4>Teléfonos de contacto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                             
                                 <h4>Describe tu vehículo</h4>
                                     <div class="caracteristicas_item_publicaciones">
@@ -485,16 +485,20 @@
     
     
       <section class="comentarios_facebook">
-            <!--<div class="iframeFacebook_comentarios">
-                  <h3>Comentarios</h3>
-    				{ module_ratingrank}
-            </div>-->
+            <div class="iframeFacebook_comentarios">
+                <h3>Comentarios</h3>
+                {module_facebookcomments,url="{tag_itemurl_nolink}",moduleTemplateGroup="Default",locale="es_CO",posts="20",width="500",colorScheme="light"}
+            </div>
+
+            <div class="iframeFacebook_comentarios2">
+                <h3>Comentarios</h3>
+            </div>
       </section>
 
-      <section class="OtrasPublicacionesVendedor">
+      <!--<section class="OtrasPublicacionesVendedor">
             <h3>Mas Publicaciones Vendedor</h3>
           	{module_webapps,16641,a,,,_blank,,6,,6}
-      </section>
+      </section>-->
 
       <section class="recomendados_detallepublicacion">
             <h3>Recomendados</h3>
