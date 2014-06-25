@@ -449,7 +449,7 @@ strong{
 }
 
 .cuadro_info_1_publicacion{
-	width: 280px;
+	width: 309px;
     margin-right: 20px;
     margin-bottom: 20px;
     display: inline-block;
@@ -457,8 +457,12 @@ strong{
 
 .cuadro_info_2_publicacion{
     display: inline-block;
-    min-width: 182px;
+	max-width: 182px;
     min-height: 250px;
     vertical-align: top;
-    background-color: #ccc;
+    text-align: center;
+    padding-top: 20px;
+}
+.cuadro_info_2_publicacion img{
+    display: block;
 }

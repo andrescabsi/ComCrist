@@ -61,7 +61,9 @@
 <span style="display:none;" class="publiNom">{tag_name}</span>
 <span style="display:none;" class="publiID">{tag_itemid}</span>
 
-<p class="breadcrumbspublicaciones"><strong>Usted está aquí:</strong><a href="/">Inicio</a> |  {tag_codigo_categoria}  |  {tag_subcategoria}  |  <span>{module_breadcrumbs}</span></p>
+<!-- BREADCRUMBS -->
+<p class="breadcrumbspublicaciones"><strong>Usted está aquí:</strong><a href="/">Inicio</a> |  <a id="categoria_Publi_enlace" href="">{tag_codigo_categoria}</a>   |  <a href="javascript:history.back(1);">{tag_subcategoria}</a>  |  <span>{module_breadcrumbs}</span></p>
+<!-- /BREADCRUMBS -->
 
 <section id="tpl_publicaciones_detalle">
 
@@ -115,7 +117,7 @@
 			<div class="cuadro_info_1_publicacion">
                 <p class="precioComCristiano">Precio ahora:<span data-a-sign="$" data-m-dec="0" vMax="999999999" data-a-dec="," data-a-sep="." class="currency-interno" id="variablePrecioAhora">{tag_precio}</span></p>
                 <p class="precioNormal"><strong>Antes: </strong><span data-a-sign="$" data-m-dec="0" vMax="999999999" data-a-dec="," data-a-sep="." class="currency-interno" id="variablePrecioAntes">{tag_precio antes}</span></p>
-                <p class="ahorrasMonto">Te ahorras <span id="variablePrecioAhorro">$80.000</span></p>
+                <p class="ahorrasMonto">Te ahorras <span id="variablePrecioAhorro" data-a-sign="$" data-m-dec="0" vMax="999999999" data-a-dec="," data-a-sep="." class="currency-interno"></span></p>
                 <p><strong>Estado: </strong> {tag_estado}</p>
                 <p><strong>Formas de Pago: </strong> Efectivo en Bancos</p>
                 <p><strong>Garantía: </strong>{tag_garantia}</p>
@@ -126,7 +128,8 @@
 			</div>
                 
             <div class="cuadro_info_2_publicacion">
- 
+                <!-- AQUI VA EL MODULO DE BADGES DEL ANUNCIANTE -->
+                {module_webapps,16609,i,{tag_anunciantes_id},,,,100,true,1   template="/ModuleTemplates/Webapps/Anunciante/Anunciante-Badges.tpl"}
             </div>
                   <div id="conoce_datos_vendedor">
                         <!--<h5>Conoce los datos del vendedor</h5>-->
@@ -234,29 +237,29 @@
                                     </ul>
                             
                                 <h4>Describe tu vehículo</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Transmision: </strong><span>{tag_transmision}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion (automovil):}</span></p>
-                                        <p><strong>Color: </strong><span>{tag_color}</span></p>
-                                        <p><strong>Recorrido: </strong><span>{tag_recorrido}</span></p>
-                                        <p><strong>Placa: </strong><span>{tag_placa}</span></p>
-                                        <p><strong>Vidrios: </strong><span>{tag_vidrios}</span></p>
-                                        <p><strong>Aire acondicionado: </strong><span>{tag_aire acondicionado}</span></p>
-                                        <p><strong>Negociable: </strong><span>{tag_negociable:}</span></p>
-                                        <p><strong>Asientos: </strong><span>{tag_asientos}</span></p>
-                                        <p><strong>Año: </strong><span>{tag_ano}</span></p>
-                                        <p><strong>Versión: </strong><span>{tag_version:}</span></p>
-                                        <p><strong>Motor recién reparado: </strong><span>{tag_motor recien reparado}</span></p>
-                                        <p><strong>Número de cilindros: </strong><span>{tag_numero de cilindros}</span></p>
-                                        <p><strong>Único dueno: </strong><span>{tag_unico dueno}</span></p>
-                                        <p><strong>Airbag: </strong><span>{tag_airbag}</span></p>
-                                        <p><strong>Combustible: </strong><span>{tag_combustible:}</span></p>
-                                        <p><strong>Frenos ABS: </strong><span>{tag_frenos abs:}</span></p>
-                                        <p><strong>Reproductor de sonido: </strong><span>{tag_rep. sonido}</span></p>
-                                        <p><strong>Campero: </strong><span>{tag_campero:}</span></p>
-                                        <p><strong>Motor: </strong><span>{tag_motor:}</span></p>
-                                        <p><strong>Financiamiento: </strong><span>{tag_doy financiamiento:}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Transmision: </strong><span>{tag_transmision}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion (automovil):}</span></li>
+                                        <li><strong>Color: </strong><span>{tag_color}</span></li>
+                                        <li><strong>Recorrido: </strong><span>{tag_recorrido}</span></li>
+                                        <li><strong>Placa: </strong><span>{tag_placa}</span></li>
+                                        <li><strong>Vidrios: </strong><span>{tag_vidrios}</span></li>
+                                        <li><strong>Aire acondicionado: </strong><span>{tag_aire acondicionado}</span></li>
+                                        <li><strong>Negociable: </strong><span>{tag_negociable:}</span></li>
+                                        <li><strong>Asientos: </strong><span>{tag_asientos}</span></li>
+                                        <li><strong>Año: </strong><span>{tag_ano}</span></li>
+                                        <li><strong>Versión: </strong><span>{tag_version:}</span></li>
+                                        <li><strong>Motor recién reparado: </strong><span>{tag_motor recien reparado}</span></li>
+                                        <li><strong>Número de cilindros: </strong><span>{tag_numero de cilindros}</span></li>
+                                        <li><strong>Único dueno: </strong><span>{tag_unico dueno}</span></li>
+                                        <li><strong>Airbag: </strong><span>{tag_airbag}</span></li>
+                                        <li><strong>Combustible: </strong><span>{tag_combustible:}</span></li>
+                                        <li><strong>Frenos ABS: </strong><span>{tag_frenos abs:}</span></li>
+                                        <li><strong>Reproductor de sonido: </strong><span>{tag_rep. sonido}</span></li>
+                                        <li><strong>Campero: </strong><span>{tag_campero:}</span></li>
+                                        <li><strong>Motor: </strong><span>{tag_motor:}</span></li>
+                                        <li><strong>Financiamiento: </strong><span>{tag_doy financiamiento:}</span></li>
+                                    </ul>
                                         
                                 <h4>Seguridad</h4>
                                     <div class="caracteristicas_item_publicaciones">
@@ -299,22 +302,22 @@
                                             <p><strong>Cantidad: </strong><span>{tag_cantidad}</span></p>
                                         </div>
                                 
-                                        <div class="caracteristicas_item_publicaciones">
-                                            <p><strong>Nombre de la Tienda: </strong><span>{tag_nombre-tienda}</span></p>
-                                            <p><strong>Dirección tienda: </strong><span>{tag_direccion tienda}</span></p>
-                                            <p><strong>Teléfono tienda: </strong><span>{tag_telefono-tienda}</span></p>
-                                        </div>
+                                        <ul class="caracteristicas_item_publicaciones">
+                                                <li><strong>Nombre de la Tienda: </strong><span>{tag_nombre-tienda}</span></li>
+                                                <li><strong>Dirección tienda: </strong><span>{tag_direccion tienda}</span></li>
+                                                <li><strong>Teléfono tienda: </strong><span>{tag_telefono-tienda}</span></li>
+                                        </ul>
                     
                                     <h4>Información de contacto</h4>
-                                        <div class="caracteristicas_item_publicaciones">
-                                            <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                            <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                            <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                            <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                            <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                            <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                            <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                        </div>
+                                        <ul class="caracteristicas_item_publicaciones">
+                                            <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                            <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                            <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                            <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                            <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                            <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                            <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                        </ul>
                             </article>
                             
                             <!-- Empleo 
@@ -322,31 +325,31 @@
                             
                             <article data-categoria="Empleo">
                                 <h4>Descripción vacante</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Salario: </strong><span>{tag_salario}</span></p>
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                        <p><strong>Tipo de contrato: </strong><span>{tag_tipo de contrato:}</span></p>
-                                        <p><strong>Tipo de trabajo: </strong><span>{tag_tipo de trabajo:}</span></p>
-                                        <p><strong>Empresa: </strong><span>{tag_empresa}</span></p>
-                                        <p><strong>Nombre de contacto: </strong><span>{tag_nombre contacto:}</span></p>
-                                        <p><strong>Email: </strong><span>{tag_email:}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Salario: </strong><span>{tag_salario}</span></li>
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                        <li><strong>Tipo de contrato: </strong><span>{tag_tipo de contrato:}</span></li>
+                                        <li><strong>Tipo de trabajo: </strong><span>{tag_tipo de trabajo:}</span></li>
+                                        <li><strong>Empresa: </strong><span>{tag_empresa}</span></li>
+                                        <li><strong>Nombre de contacto: </strong><span>{tag_nombre contacto:}</span></li>
+                                        <li><strong>Email: </strong><span>{tag_email:}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                             </article>
                             <!-- Aplicaciones 
                             :::::::::::::::::::::::::::::::::::::::::::::::::::: -->
                                 
                             <article data-categoria="Aplicaciones">
                                 <h4>Descripción aplicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                       <p><strong>Versión: </strong><span>{tag_version:}</span></p>
-                                       <p><strong>URL de descarga: </strong><span>{tag_url descarga}</span></p>
-                                       <p><strong>Requisitos: </strong><span>{tag_requisitos}</span></p>
-                                       <p><strong>Tamaño: </strong><span>{tag_tamano}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                       <li><strong>Versión: </strong><span>{tag_version:}</span></li>
+                                       <li><strong>URL de descarga: </strong><span>{tag_url descarga}</span></li>
+                                       <li><strong>Requisitos: </strong><span>{tag_requisitos}</span></li>
+                                       <li><strong>Tamaño: </strong><span>{tag_tamano}</span></li>
+                                    </ul>
                             </article>
                             
                             <!-- Viajes - Turismo 
@@ -354,19 +357,19 @@
                             
                             <article data-categoria="Viajes-Turismo">
                                 <h4>Información de contácto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                             
                                 <h4>Ubicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                             </article>
             
                             <!-- Servicios 
@@ -374,24 +377,24 @@
             
                             <article data-categoria="Servicios">
                                 <h4>Información de contácto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                                 <h4>Ubicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                                 <h4>Este servicio se vende en</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Nombre de la Tienda: </strong><span>{tag_nombre-tienda}</span></p>
-                                        <p><strong>Dirección tienda: </strong><span>{tag_direccion tienda}</span></p>
-                                        <p><strong>Teléfono tienda: </strong><span>{tag_telefono-tienda}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Nombre de la Tienda: </strong><span>{tag_nombre-tienda}</span></li>
+                                        <li><strong>Dirección tienda: </strong><span>{tag_direccion tienda}</span></li>
+                                        <li><strong>Teléfono tienda: </strong><span>{tag_telefono-tienda}</span></li>
+                                    </ul>
                             </article>
                             
                             <!-- Emisoras 
@@ -399,18 +402,18 @@
                             
                             <article data-categoria="Emisoras">
                                 <h4>Información de contácto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                                 <h4>Ubicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                             </article>
                             
                             <!-- Oportunidades de Negocio 
@@ -418,19 +421,19 @@
             
                             <article data-categoria="Oportunidades-Negocio">
                                 <h4>Información de contácto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                 
                                 <h4>Ubicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                             </article>
             
                             <!-- Periodicos y revistas 
@@ -438,18 +441,18 @@
             
                             <article data-categoria="Periodicos-Revistas">
                                 <h4>Información de contácto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                                 <h4>Ubicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                             </article>
                                 
                             <!-- Clases - Cursos 
@@ -457,25 +460,25 @@
                             
                             <article data-categoria="Clases-Cursos">
                                 <h4>Información de contácto</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></p>
-                                        <p><strong>Celular: </strong><span>{tag_celular de contacto}</span></p>
-                                        <p><strong>Sitio Web: </strong><span>{tag_sitio web}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Teléfono: </strong><span>{tag_telefono de contacto}</span></li>
+                                        <li><strong>Celular: </strong><span>{tag_celular de contacto}</span></li>
+                                        <li><strong>Sitio Web: </strong><span>{tag_sitio web}</span></li>
+                                    </ul>
                                 <h4>Ubicación</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Departamento: </strong><span>{tag_departamento}</span></p>
-                                        <p><strong>Ciudad: </strong><span>{tag_ciudad}</span></p>
-                                        <p><strong>Barrio: </strong><span>{tag_barrio}</span></p>
-                                        <p><strong>Dirección: </strong><span>{tag_direccion}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Departamento: </strong><span>{tag_departamento}</span></li>
+                                        <li><strong>Ciudad: </strong><span>{tag_ciudad}</span></li>
+                                        <li><strong>Barrio: </strong><span>{tag_barrio}</span></li>
+                                        <li><strong>Dirección: </strong><span>{tag_direccion}</span></li>
+                                    </ul>
                 
                                 <h4>Esta clase - Curso se vende en</h4>
-                                    <div class="caracteristicas_item_publicaciones">
-                                        <p><strong>Nombre de la Tienda: </strong><span>{tag_nombre-tienda}</span></p>
-                                        <p><strong>Dirección tienda: </strong><span>{tag_direccion tienda}</span></p>
-                                        <p><strong>Teléfono tienda: </strong><span>{tag_telefono-tienda}</span></p>
-                                    </div>
+                                    <ul class="caracteristicas_item_publicaciones">
+                                        <li><strong>Nombre de la Tienda: </strong><span>{tag_nombre-tienda}</span></li>
+                                        <li><strong>Dirección tienda: </strong><span>{tag_direccion tienda}</span></li>
+                                        <li><strong>Teléfono tienda: </strong><span>{tag_telefono-tienda}</span></li>
+                                    </ul>
                             </article>
          
                 </div>
@@ -487,7 +490,7 @@
       <section class="comentarios_facebook">
             <div class="iframeFacebook_comentarios">
                 <h3>Comentarios</h3>
-                {module_facebookcomments,url="{tag_itemurl_nolink}",moduleTemplateGroup="Default",locale="es_CO",posts="20",width="500",colorScheme="light"}
+                { module_facebookcomments,url="{tag_itemurl_nolink}",moduleTemplateGroup="Default",locale="es_CO",posts="20",width="500",colorScheme="light"}
             </div>
 
             <div class="iframeFacebook_comentarios2">
