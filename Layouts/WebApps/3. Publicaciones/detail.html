@@ -1,25 +1,21 @@
-<!-- ESTILOS
-//************************************************************************ -->
-
-<!-- *********************Thumbnails********************* -->
-<link rel="stylesheet" type="text/css" href="/Wigets/Thumbnail/estilos_thumbnail.css" />
-<link type="text/css" href="/Wigets/Thumbnail/jquery.jscrollpane.css" rel="stylesheet" media="all" />
-<!-- *********************Tabs********************* -->
-<link href="/Wigets/Tabs/tabcontent.css" rel="stylesheet" type="text/css" />
-<!-- *********************Estilos********************* -->
-<link rel="stylesheet" type="text/css" href="/estilos/Webapps/publicaciones.css">
-
-
 <!-- SCRIPTS
 //************************************************************************ -->
 
 <!-- *********************jQuery********************* -->
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- *********************Campos Categorias********************* -->
+<script src="/js/Publicaciones/CamposCategorias.js"></script>
+<!-- *********************Tabs********************* -->
+<script src="/Wigets/Tabs/tabcontent.js" type="text/javascript"></script>
 <!-- *********************Lightbox popup********************* -->
 <link href="/Wigets/featherlight/featherlight.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
 <script src="/Wigets/featherlight/featherlight.js" type="text/javascript" charset="utf-8"></script>
-<!-- *********************Campos Categorias********************* -->
-<script src="/js/Publicaciones/CamposCategorias.js"></script>
+<!-- *********************Denunciar Publicacion********************* -->
+<script src="/js/Publicaciones/FormularioDenuncio.js"></script>
+<script src="/js/Denunciar_Publicacion.js"></script>
+
+
+<!-- *********************Campos Categorias.js********************* -->
 <script>
 	var nombrePublicacion = $(".publiNom").html();
 	var idPublicacion = $(".publiID").html();
@@ -28,11 +24,8 @@
     //************************************
     var categoria_codigo = "{tag_codigo_categoria}";
 </script>
-<!-- *********************Denunciar Publicacion********************* -->
-<script src="/js/Publicaciones/FormularioDenuncio.js"></script>
-<script src="/js/Denunciar_Publicacion.js"></script>
-<!-- *********************Tabs********************* -->
-<script src="/Wigets/Tabs/tabcontent.js" type="text/javascript"></script>
+
+
 
 <span style="display:none;" class="publiNom">{tag_name}</span>
 <span style="display:none;" class="publiID">{tag_itemid}</span>

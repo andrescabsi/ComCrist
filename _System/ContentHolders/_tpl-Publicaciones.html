@@ -1,28 +1,8 @@
-<!--CSS PIE DE PÁGINA INICIO (SOLO LLAMADOS A HOJAS DE ESTILOS)-->
-
-
-
-<!-- Carousell Slider CSS -->
-<link rel="stylesheet" type="text/css" href="/Wigets/jcarousel-master/examples/responsive/jcarousel.responsive.css"/>
-
 <!--SCRIPTS PIE DE PÁGINA INICIO (SOLO LLAMADOS A HOJAS JS)-->
-<!--jQuery UI-->
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-
-
-<!-- Anunciantes vs Publicaciones -->
-<script src="/js/AnunciantesvsPublicaciones.js"></script>
-
-<!-- Carousell Slider -->
-<script type="text/javascript" src="/Wigets/jcarousel-master/dist/jquery.jcarousel.min.js"></script>
-<script type="text/javascript" src="/Wigets/jcarousel-master/examples/responsive/jcarousel.responsive.js"></script>
 
 <!-- Formato Moneda -->
 <script src="/js/Currency/autoNumeric.js" type="text/javascript"></script>
-
-<!-- Owl Carousel -->
-<script src="/Wigets/owl/owl.carousel.min.js"></script>
 
 <!-- Denunciar Publicacion -->
 <script src="/js/Denunciar_Publicacion.js"></script>
@@ -36,20 +16,40 @@
 
 
 
-
 <!--SCRIPTS PIE DE PÁGINA (SOLO SCRIPTS)-->
 <script type="text/javascript" language="javascript">
+
     $(document).ready(function() {
 
-	boton_menu_categorias_show();
-	IdentVacioImagenes();
-         
-      // Intercambiador de contenidos dependiendo si esta loggeado o no
-      // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-      
-
-        var estaLoggeado = "{module_isloggedin}"
+		boton_menu_categorias_show();
+		IdentVacioImagenes();
+		IntercambiadordecontenidosLoggedin_out();
+		FormateadorMonedaPublicaciones();
+		DenunciarPublicaciones();
+		ThumbSliderFotosPublicacionDetail();
+	
         
+    });
+    
+    
+   
+	// Eliminar fotos vacías
+    function IdentVacioImagenes(){
+		$("img[src='?Action=thumbnail&Width=130&Height=94&algorithm=fill_proportional']").remove();
+        $("img[src='?Action=thumbnail&Width=600&Height=400&algorithm=fill_proportional']").parent().remove();
+    	$("img[src='?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional']").attr("src", "http://comcristiano.businesscatalyst.com/Imagenes/Dummies/placeholder_image1_New.png?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional");
+    }
+    
+    //Mostrar menu categorias botón superior
+    function boton_menu_categorias_show(){
+        $(".button_menu_categorias").click(function(){
+        	$("#menu_categorias_home_ppal").fadeToggle();
+        });
+    }
+
+	// Intercambiador de contenidos dependiendo si esta loggeado o no
+    function IntercambiadordecontenidosLoggedin_out(){
+        var estaLoggeado = "{module_isloggedin}"
         if (estaLoggeado == "1") {
             $(".contenidoLoggeado").show();
             $(".contenidoPublico").remove();
@@ -61,26 +61,10 @@
             //Boton Registrarme
             $("a#botonPublicarRegistro").attr("href", "/registro.html").text("REGISTRARME");
         };
+    }
 
-                
-        // Conexion Anunciantes - Publicaciones
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-        
-        var itemID = $('#item-id').data('item-id');
-        
-        $('.related li').hide();
-        
-        $('.related li').each(function() {
-            var relatedID = $(this).data('related-id');
-            if (relatedID != itemID) {
-                $(this).remove();
-            } else {
-                $(this).show();
-            }
-        });
-        
-        // Formato Moneda
-        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+    // Formato Moneda
+    function FormateadorMonedaPublicaciones(){
         $(function($) {
             $('.currency-interno').autoNumeric('init');
         });
@@ -88,102 +72,21 @@
         $("#boton-listado").click(function() {
             $('.currency-interno2').autoNumeric('init');
         });
-        
-                                    /*
-                                    // Limitar caracteres 
-                                    // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-                                    
-                                    $(function() {
-                                        $('.dot1').dotdotdot();
-                                        $('#dot2').dotdotdot();
-                                        $('#dot3').dotdotdot({
-                                            after: 'a.readmore'
-                                        });
-                                        $('#dot4').dotdotdot({
-                                            watch: 'window'
-                                        });
-                                        $('#dot5 .pathname').each(function() {
-                                            var path = $(this).html().split('/');
-                                            if (path.length > 1) {
-                                                var name = path.pop();
-                                                $(this).html(path.join('/') + '<span class="filename">/' + name + '</span>');
-                                                $(this).dotdotdot({
-                                                    after: '.filename',
-                                                    wrap: 'letter'
-                                                });
-                                            }
-                                        });
-                                    });
-                                    
-                                    */
-        
-        // DENUNCIAR PUBLICACIÓN
-        // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::      
+    }
+
+    // Denunciar Publicación
+    function DenunciarPublicaciones(){    
         $( "#boton_denunciar_publicacion" ).click(function() {
             $("#denunciarPublicacion_item").toggle("slow");
             //$(this).text('Ocultar');
         });
+    }
 
-        // fake breadcrumbs - publicaciones
-		 if(jQuery(".publicaciones-detail").length > 0){
-			  var curBreadCrumbs = jQuery("nav.breadcrumbs-a p").html();
-			  var breadCrumbs =      "<p><a href='/'>Inicio</a> <span>|</span> <a href='/publicaciones'>Publicaciones</a> <span>|</span> <a href='#'>"+curBreadCrumbs+"</a></p>";
-			  jQuery("nav.breadcrumbs-a").html(breadCrumbs);
-		 }
-        
-        
-        
-      	var $mail = $("#mail");
-        
-        $("#email").blur(function() {
-    		$mail.val( this.value );
-		});
-        
-
-        $("#email").keyup(function() {
-            $mail.val( this.value );
-        });
-    
-        
-        
-        /* Javascript Slider Thumbnail */
-		$('#cr-container').crotator({
-			// slideshow on
+    // Slider Publicaciones Detalle
+	function ThumbSliderFotosPublicacionDetail(){   
+		$("#cr-container").crotator({
 			autoplay: true
 		});
-        
-        
-        
-        
-	
-        
-    });
-    
-    
-   
-    
-    function IdentVacioImagenes(){
-    
-        // Eliminar fotos vacías
-        //************************************
-		$("img[src='?Action=thumbnail&Width=130&Height=94&algorithm=fill_proportional']").remove();
-        $("img[src='?Action=thumbnail&Width=600&Height=400&algorithm=fill_proportional']").parent().remove();
-    	$("img[src='?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional']").attr("src", "http://comcristiano.businesscatalyst.com/Imagenes/Dummies/placeholder_image1_New.png?Action=thumbnail&Width=160&Height=150&algorithm=fill_proportional");
-    }
-    
-    //MOSTRAR MENU CATEGORIAS BOTON
-    function boton_menu_categorias_show(){
-        
-        $(".button_menu_categorias").click(function(){
-        	$("#menu_categorias_home_ppal").fadeToggle();
-        });
-    
-    }
-
-
-    
-    
-    
-    
+	}
 
 </script>
