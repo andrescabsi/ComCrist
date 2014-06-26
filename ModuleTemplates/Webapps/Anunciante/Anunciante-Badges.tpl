@@ -4,12 +4,12 @@
 $("document").ready(function(){
 
 	if ({tag_cieec}) {
-		console.log("Verdadero SIEEC");
+		//console.log("Verdadero SIEEC");
 		$("#badge_cieec_img").show();
 	};
 
 	if ({tag_empresario biblico}) {
-		console.log("Verdadero Diezmador");
+		//console.log("Verdadero Diezmador");
 		$("#badge_diezmadorleal_img").show();
 	};
 
