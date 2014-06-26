@@ -2,8 +2,12 @@
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <!-- Underscore -->
-   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
 
+
+
+
+<button id="holau">Prueba</button>
 
 <p class="breadcrumbspublicaciones"><strong>Usted está aquí:</strong><a href="/">Inicio</a> |  {tag_nombre categoria:}  |  <span>{module_breadcrumbs}</span></p>
 
@@ -128,6 +132,9 @@
 </script>
 <!-- /PLANTILLA LISTADO -->
 
+
+
+
 <!-- SCRIPT UNDERSCORE -->
 <script>
 
@@ -137,8 +144,16 @@
     /* FILTROS
     **************************************************************************************/
 
+    var filtrarporPrecio =  _.where(list,{"ciudad":"Bogota"});
+
+    $("#holau").click(function(){
+        //list = _.shuffle(list);
+        console.log("Auuu");
+        var filtrarporPrecio = _.shuffle(list);
+    });
+
     //Mostrar los elementos aleatorios
-    //list = _.shuffle(list);
+    list = filtrarporPrecio;
     
     //Solo muestra la ciudad en la clave
     //list = _.where(list,{"ciudad":"Bogota"});
@@ -166,12 +181,9 @@
         //return item.precio;
     //});
 
-    $("#holau").click(function(){
-        list = _.sortBy(list,function(item){
-            return item.precio;
-        });
-    });
-    
+
+
+
 
     //Organizar por precio de mayor a menor
     //list = _.sortBy(list,function(item){
@@ -201,4 +213,8 @@
 
 </script>
 <!-- /SCRIPT UNDERSCORE -->
+
+
+
+
 

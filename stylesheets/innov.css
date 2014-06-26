@@ -253,6 +253,11 @@ button {
     color: #333;
 }
 
+.cat_button[type="submit"]:hover {
+    background-color: #000;
+    color: white;
+}
+
 .button_menu_categorias{
     cursor:pointer;
 }
